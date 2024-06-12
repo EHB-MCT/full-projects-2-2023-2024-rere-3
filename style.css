@@ -42,6 +42,8 @@ nav img {
 h1 {
 	font-size: 35px;
 	font-family: "Antonio", sans-serif;
+    text-align: center;
+    margin-right: 110px;
 	
 }
 
@@ -68,6 +70,7 @@ h3,
 h4,
 p {
 	color: #56544f;
+    margin-left: 120px;
 }
 
 .primary {
@@ -89,29 +92,34 @@ p {
 	text-underline-offset: 10px;
 }
 
-.breastcancer {
-    width: 200px;
-    height: 150px;
-    margin-left: 100px;
-    margin-top: 10px;
-    border-radius: 25px;
-    background: #FFBF00;
-    padding: 5px;
-    box-sizing: border-box; 
-   
+.breast-cancer {
+    
+        width: 200px;
+        height: 150px;
+        margin: -0px auto 0; /* Ajustez la valeur de margin-top selon vos besoins */
+        border-radius: 25px;
+        background: #FFBF00;
+        padding: 5px;
+        box-sizing: border-box; 
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    
+    
 }
 
-.breastcancer img {
-    width: 100%;
-    height: 100%;
-    border-radius: 25px; 
+.breast-cancer img {
+    max-width: 100%; /* Pour que l'image ne dépasse pas le conteneur */
+    max-height: 100%; /* Pour que l'image ne dépasse pas le conteneur */
+    border-radius: 20px; 
+    margin-top: 50px;
 }
 
 .muscle {
     width: 200px;
     height: 150px;
-    margin-left: 100px;
-    margin-top: 10px;
+    margin: 0 auto;
+    margin-top: 40px;
     border-radius: 25px;
     background: #FFBF00;
     padding: 5px;
@@ -119,35 +127,33 @@ p {
 }
 
 .muscle img {
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
     border-radius: 25px; 
 }
 
 .movement {
 	width: 200px;
     height: 140px;
-    margin-left: 100px;
-    margin-top: 10px;
+    margin: 0 auto;
+    margin-top: 40px;
     border-radius: 25px;
     background: #FFBF00;
     padding: 5px;
     box-sizing: border-box;
-
 }
 
 .movement img {
 	width: 100%;
-    height: 200%;
+    height: 100%;
     border-radius: 25px; 
 }
-
 
 .transcranial {
     width: 200px;
     height: 200px;
-    margin-left: 100px;
-    margin-top: 10px;
+    margin: 0 auto;
+    margin-top: 40px;
     border-radius: 25px;
     background: #FFBF00;
     padding: 5px;
@@ -155,16 +161,16 @@ p {
 }
 
 .transcranial img {
-    width: 100%;
-    height: 50%;
+    max-width: 100%;
+    max-height: 100%;
     border-radius: 25px; 
 }
 
 .fatigue {
     width: 200px;
     height: 140px;
-    margin-left: 100px;
-    margin-top: 10px;
+    margin: 0 auto;
+    margin-top: 40px;
     border-radius: 25px;
     background: #FFBF00;
     padding: 5px;
@@ -172,17 +178,16 @@ p {
 }
 
 .fatigue img {
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
     border-radius: 25px; 
 }
-
 
 .knee {
     width: 200px;
     height: 140px;
-    margin-left: 100px;
-    margin-top: 10px;
+    margin: 0 auto;
+    margin-top: 40px;
     border-radius: 25px;
     background: #FFBF00;
     padding: 5px;
@@ -190,17 +195,16 @@ p {
 }
 
 .knee img {
-    width: 100%;
-    height: 100%;
+    max-width: 100%;
+    max-height: 100%;
     border-radius: 25px; 
 }
-
 
 .ghost {
     width: 150px;
     height: 170px;
-    margin-left: 130px;
-    margin-top: 10px;
+    margin: 0 auto;
+    margin-top: 40px;
     border-radius: 25px;
     background: #FFBF00;
     padding: 5px;
@@ -208,64 +212,25 @@ p {
 }
 
 .ghost img {
-    width: 100%;
-    height: 10%;
+    max-width: 100%;
+    max-height: 100%;
     border-radius: 25px; 
 }
 
 
+.centered-2,
+.centered-3,
+.centered-4,
+.centered-5,
+.centered-6,
+.centered-7 {
+    text-align: center;
+    margin-top: 5px;
+    color: #FFBF00;;
+}
+
 .centered-1 {
-	position: absolute;
-	top: 75%;
-	left: 55%;
-	transform: translate(-50%, -50%);
-	color: white;
-  }
-
-  .centered-2 {
-	position: absolute;
-	top: 100%;
-	left: 53%;
-	transform: translate(-50%, -50%);
-	color: white;
-  }
-
-  .centered-3 {
-	position: absolute;
-	top: 120%;
-	left: 55%;
-	transform: translate(-50%, -50%);
-	color: white;
-  }
-
-  .centered-4 {
-	position: absolute;
-	top: 155%;
-	left: 45%;
-	transform: translate(-50%, -50%);
-	color: white;
-  }
-
-  .centered-5 {
-	position: absolute;
-	top: 180%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	color: white;
-  }
-
-  .centered-6 {
-	position: absolute;
-	top: 203%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	color: white;
-  }
-
-  .centered-7 {
-	position: absolute;
-	top: 230%;
-	left: 52%;
-	transform: translate(-50%, -50%);
-	color: white;
-  }
+    text-align: center;
+    margin-top: 5px;
+    color: #FFBF00;
+}
