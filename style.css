@@ -98,6 +98,7 @@ p {
     background: #FFBF00;
     padding: 5px;
     box-sizing: border-box; 
+   
 }
 
 .breastcancer img {
@@ -257,6 +258,14 @@ p {
 	position: absolute;
 	top: 203%;
 	left: 50%;
+	transform: translate(-50%, -50%);
+	color: white;
+  }
+
+  .centered-7 {
+	position: absolute;
+	top: 230%;
+	left: 52%;
 	transform: translate(-50%, -50%);
 	color: white;
   }
