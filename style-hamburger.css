@@ -10,11 +10,9 @@ body {
 }
 
 .menu-icon {
-    position: fixed;
-    top: 20px;
-    left: 20px;
+    font-size: 24px;
     cursor: pointer;
-    z-index: 1000;
+    color: #FFBF00
 }
 
 .menu-icon div {

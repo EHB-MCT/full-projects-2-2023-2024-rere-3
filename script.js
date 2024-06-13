@@ -23,3 +23,4 @@ function clearSearch() {
     document.getElementById('searchInput').value = '';
     searchMembers(); // Call searchMembers to reset the member list display
 }
+
