@@ -298,10 +298,11 @@ p {
 		padding: 10px;
 	}
 
-	.nav-links.show {
+	.nav-links.show{
 		display: flex;
 	}
 }
+	
 
 .outer {
 	display: flex;
