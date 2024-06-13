@@ -181,3 +181,33 @@ p {
 .img {
     margin-left: -10px;
 }
+
+.open-sans {
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal; 
+    font-style: normal; 
+}
+ 
+.outer {
+    background-color: #ffbf00;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .outer {
+        padding: 10px; /* Réduire l'espacement */
+        font-size: 14px; /* Ajuster la taille de la police */
+    }
+}
+
+@media (max-width: 480px) {
+    .outer {
+        padding: 5px; /* Réduire encore l'espacement pour les plus petits écrans */
+        font-size: 12px; /* Ajustement supplémentaire de la taille de la police */
+    }
+}
+
