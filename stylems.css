@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+.container {
+    padding: 20px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+}
+.logo {
+    height: 40px;
+    width: 40px;
+}
+.menu {
+    font-size: 24px;
+    cursor: pointer;
+    color: #FFBF00
+}
+.back-arrow {
+    display: block;
+    margin: 10px 0;
+    text-align: center;
+    font-size: 24px;
+}
+.profile-pic {
+    text-align: center;
+    margin: 20px 0;
+}
+.profile-image {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    border: 5px solid #ffcc00;
+}
+.details {
+    text-align: center;
+    margin: 20px 0;
+}
+.details h2 {
+    margin: 5px 0;
+    font-size: 18px;
+}
+.details p {
+    margin: 3px 0;
+    font-size: 14px;
+}
+.biography {
+    text-align: center;
+    font-size: 18px;
+}
+
+.outer {
+    display: flex;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #FFBF00;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
+}
+
+.back-arrow a {
+    font-size: 48px;
+    color: black;
+    text-decoration: none;
+}
