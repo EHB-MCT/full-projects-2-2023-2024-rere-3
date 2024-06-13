@@ -40,7 +40,7 @@ h1 {
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 body {
-	background-color: #faf8f6;
+    background-color: #faf8f6;
 }
 
 nav {
@@ -52,26 +52,32 @@ nav {
 }
 
 a {
-	text-decoration: none;
-	color: #fff;
-	font-family: "Nunito", sans-serif;
-	font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
+}
+
+nav a {
+    padding-top: 70px;
+    text-align: center;
 }
 
 .nav-links {
-	display: flex;
-	align-items: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .nav-links a {
-	margin-left: 20px;
-	margin-right: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 nav img {
-	width: 110px;
-	height: 100px;
-	padding-left: 20px;
+    width: 110px;
+    height: 100px;
+    padding-left: 20px;
 }
 
 .hamburger {
@@ -89,25 +95,27 @@ nav img {
 }
 
 h1 {
-	font-size: 35px;
-	font-family: "Antonio", sans-serif;
+    font-size: 35px;
+    font-family: "Antonio", sans-serif;
+    text-align: center;
 }
 
 h2 {
-	font-family: "Nunito", sans-serif;
-	font-size: 30px;
-	font-weight: bold;
+    font-family: "Nunito", sans-serif;
+    font-size: 30px;
+    font-weight: bold;
 }
 
 h3 {
-	font-size: 16px;
-	font-family: "Open Sans", sans-serif;
+    font-size: 30px;
+    font-family: "Open Sans", sans-serif;
+    text-align: center;
 }
 
 p {
-	font-family: "Open Sans", sans-serif;
-	font-style: normal;
-	font-size: 15px;
+    font-family: "Open Sans", sans-serif;
+    font-style: normal;
+    font-size: 15px;
 }
 .LabImage {
 	display: flex;
@@ -122,15 +130,143 @@ h2,
 h3,
 h4,
 p {
-	color: #56544f;
+    color: #56544f;
+}
+
+.primary {
+    background-color: #56544f;
+    padding: 20px;
+    margin-left: 15px;
+    margin-right: 80%;
+}
+
+.primary a:hover {
+    color: #ffbf00;
 }
 
 .nav-links a:hover {
-	text-decoration: underline;
-	text-decoration-color: #56544f;
-	color: #56544f;
-	text-decoration-thickness: 4px;
-	text-underline-offset: 10px;
+    text-decoration: underline;
+    text-decoration-color: #56544f;
+    color: #56544f;
+    text-decoration-thickness: 4px;
+    text-underline-offset: 10px;
+}
+
+
+.buttons-container,
+.contacts-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap; 
+    margin-top: 20px;
+}
+
+.button {
+    background-color: #ffbf00;
+    border: none;
+    color: white;
+    padding: 20px 50px; 
+    margin: 10px; 
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 0; 
+    width: 250px; 
+    height: 60px; 
+}
+
+.button-2 {
+    background-color: #ffbf00;
+    border: none;
+    color: white;
+    padding: 20px 50px; 
+    margin: 10px; 
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 0; 
+    width: 250px; 
+    height: 60px; 
+}
+
+.button-3 {
+    background-color: #ffbf00;
+    border: none;
+    color: white;
+    padding: 15px 50px; 
+    margin: 10px; 
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 0; 
+    width: 350px; 
+    height: 60px; 
+}
+
+.button-3 img {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+.button-4 {
+    background-color: #ffbf00;
+    border: none;
+    color: white;
+    padding: 15px 50px; 
+    margin: 10px; 
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    border-radius: 0; 
+    width: 350px; 
+    height: 60px; 
+}
+
+.button-4 img {
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+p {
+    color: white;
+}
+
+.img {
+    margin-left: -10px;
+}
+
+.open-sans {
+    font-family: "Open Sans", sans-serif;
+    font-weight: normal; 
+    font-style: normal; 
+}
+ 
+.outer {
+    background-color: #ffbf00;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+@media (max-width: 768px) {
+    .outer {
+        padding: 10px; /* Réduire l'espacement */
+        font-size: 14px; /* Ajuster la taille de la police */
+    }
+}
+
+@media (max-width: 480px) {
+    .outer {
+        padding: 5px; /* Réduire encore l'espacement pour les plus petits écrans */
+        font-size: 12px; /* Ajustement supplémentaire de la taille de la police */
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -273,4 +409,3 @@ footer {
     font-size: 24px; 
     color: inherit; 
 }
-
