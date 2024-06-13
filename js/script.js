@@ -28,3 +28,9 @@ function clearSearch() {
         projects[i].style.display = "";
     }
 }
+
+
+
+
+
+

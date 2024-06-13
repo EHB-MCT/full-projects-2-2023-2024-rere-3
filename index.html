@@ -9,7 +9,7 @@
 <body>
     <header>
         <nav>
-            <img src="images/Logo_RERE_RGB-removebg.png">
+            <img src="images/Logo_RERE_RGB-removebg.png" alt="Logo">
             <div class="nav-links">
                 <a href="#">Home</a>
                 <a href="#">Members</a>
@@ -79,19 +79,20 @@
             </div>
             <div class="project-text">GHOST APP GAME</div>
         </div>
+
+        <footer class="outer">
+            <img src="images/Group_256.png">
+            <p>Laarbeeklaan 121 1090 Jette </p>
+        </footer>
     </div>
 
     <script>
-        
         function searchMembers() {
-            
             var input = document.getElementById('searchInput');
             var filter = input.value.toUpperCase();
         
-            
             var projects = document.getElementsByClassName('project-text');
         
-            
             for (var i = 0; i < projects.length; i++) {
                 var text = projects[i].textContent || projects[i].innerText;
                 var projectContainer = projects[i].closest('.project');
@@ -102,7 +103,6 @@
                 }
             }
         }
-        
         
         function clearSearch() {
             document.getElementById('searchInput').value = '';
