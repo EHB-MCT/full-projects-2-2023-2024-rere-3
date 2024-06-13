@@ -114,8 +114,18 @@ h1 {
     background-color: #FFBF00;
 }
 
-.a {
-    font-style: none    ;
-    
+.back-arrow a {
+    text-decoration: none;
+    font-size: 24px; 
+    color: inherit; 
+}
+
+.back-arrow {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 50px;
+    width: 50px; 
 }
 
