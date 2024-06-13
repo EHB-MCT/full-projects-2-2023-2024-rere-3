@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>Projects</title>
 </head>
 <body>
   
@@ -16,7 +16,111 @@
   <link href="css/style.css" rel="stylesheet">
 </head>
 <body>
+    <header>
+        <nav>
+            <img src="images/Logo_RERE_RGB-removebg.png" alt="Logo">
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Members</a>
+                <a href="#">Projects</a>
+                <a href="#">Publications</a>
+                <a href="#">Blog</a>
+                <a href="#">News & Events</a>
+            </div>
+        </nav>
+    </header>
+    
+    <h1>PROJECTS</h1>
+    
+    <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search for names or job titles.." onkeyup="searchMembers()">
+        <div class="search-icon" onclick="clearSearch()">
+            <img src="images/search-svgrepo-com.png" alt="Search">
+        </div>
+    </div>
 
+    <div class="projects">
+        <div class="project breast-cancer">
+            <div class="project-image">
+                <img src="images/Breast cancer2.webp" alt="Breast cancer">
+            </div>
+            <div class="project-text">PAIN IN BREAST CANCER SURVIVORS</div>
+        </div>
 
-  <script src="js/index.js"></script>
+        <div class="project muscle">
+            <div class="project-image">
+                <img src="images/Muscle-Activity-in-Virtual-Reality.webp" alt="Muscle Activity">
+            </div>
+            <div class="project-text">AUGMENTED REALITY MUSCLE</div>
+        </div>
+
+        <div class="project movement">
+            <div class="project-image">
+                <img src="images/MOVEMENT - EVOKED PAIN.webp" alt="movement">
+            </div>
+            <div class="project-text">MOVEMENT - EVOKED PAIN</div>
+        </div>
+
+        <div class="project transcranial">
+            <div class="project-image">
+                <img src="images/TRANSCRANIAL 2.webp" alt="transcranial">
+            </div>
+            <div class="project-text">TRANSCRANIAL</div>
+        </div>
+
+        <div class="project fatigue">
+            <div class="project-image">
+                <img src="images/post-stroke-fatigue_ShaneUnsplash.jpg" alt="fatigue">
+            </div>
+            <div class="project-text">POST-STROKE FATIGUE</div>
+        </div>
+
+        <div class="project knee">
+            <div class="project-image">
+                <img src="images/warning-signs-for-osteoarthritis-chris-bailey.jpg" alt="knee">
+            </div>
+            <div class="project-text">OSTEOARTHRITIS PAIN</div>
+        </div>
+
+        <div class="project ghost">
+            <div class="project-image">
+                <img src="images/product-list7-img-1.jpg" alt="ghost">
+            </div>
+            <div class="project-text">GHOST APP GAME</div>
+        </div>
+
+        <footer class="outer">
+            <img src="images/Group_256.png">
+            <p>Laarbeeklaan 121 1090 Jette </p>
+        </footer>
+    </div>
+
+    <script>
+        function searchMembers() {
+            var input = document.getElementById('searchInput');
+            var filter = input.value.toUpperCase();
+        
+            var projects = document.getElementsByClassName('project-text');
+        
+            for (var i = 0; i < projects.length; i++) {
+                var text = projects[i].textContent || projects[i].innerText;
+                var projectContainer = projects[i].closest('.project');
+                if (text.toUpperCase().indexOf(filter) > -1) {
+                    projectContainer.style.display = "";
+                } else {
+                    projectContainer.style.display = "none";
+                }
+            }
+        }
+        
+        function clearSearch() {
+            document.getElementById('searchInput').value = '';
+            
+            var projects = document.getElementsByClassName('project');
+            for (var i = 0; i < projects.length; i++) {
+                projects[i].style.display = "";
+            }
+        }
+    </script>
 </body>
+</html>

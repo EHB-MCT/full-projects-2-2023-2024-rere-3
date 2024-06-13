@@ -1,3 +1,9 @@
+
+
+
+
+
+
 @import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
@@ -147,4 +153,41 @@ footer {
 	display: flex;
 	justify-content: center;
 	align-items: center;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    margin: 20px auto; /* Centrer horizontalement */
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px 20px 10px 10px;
+    font-size: 16px;
+    border: 1px solid #000;
+    border-radius: 25px;
+    outline: none;
+}
+
+.search-icon {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-icon img {
+    width: 20px;
+    height: 20px;
 }
