@@ -24,7 +24,7 @@
     <h1>PROJECTS</h1>
     
     <div class="search-bar">
-        <input type="text" id="searchInput" onkeyup="searchMembers()" placeholder="Search for names or job titles..">
+        <input type="text" id="searchInput" placeholder="Search for names or job titles.." onkeyup="searchMembers()">
         <div class="search-icon" onclick="clearSearch()">
             <img src="images/search-svgrepo-com.png" alt="Search">
         </div>
@@ -80,5 +80,38 @@
             <div class="project-text">GHOST APP GAME</div>
         </div>
     </div>
+
+    <script>
+        
+        function searchMembers() {
+            
+            var input = document.getElementById('searchInput');
+            var filter = input.value.toUpperCase();
+        
+            
+            var projects = document.getElementsByClassName('project-text');
+        
+            
+            for (var i = 0; i < projects.length; i++) {
+                var text = projects[i].textContent || projects[i].innerText;
+                var projectContainer = projects[i].closest('.project');
+                if (text.toUpperCase().indexOf(filter) > -1) {
+                    projectContainer.style.display = "";
+                } else {
+                    projectContainer.style.display = "none";
+                }
+            }
+        }
+        
+        
+        function clearSearch() {
+            document.getElementById('searchInput').value = '';
+            
+            var projects = document.getElementsByClassName('project');
+            for (var i = 0; i < projects.length; i++) {
+                projects[i].style.display = "";
+            }
+        }
+    </script>
 </body>
 </html>

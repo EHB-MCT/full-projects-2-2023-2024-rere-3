@@ -1,18 +1,13 @@
-@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
-
 body {
     background-color: #faf8f6;
 }
 
 nav {
-    padding-top: 0;
+    padding: 10px 20px;
     background-color: #ffbf00;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 10px 20px;
 }
 
 a {
@@ -51,6 +46,7 @@ h1 {
     width: 80%;
     max-width: 600px;
     position: relative;
+    margin: 20px auto; /* Centrer horizontalement */
 }
 
 .search-bar input {
@@ -60,7 +56,6 @@ h1 {
     border: 1px solid #000;
     border-radius: 25px;
     outline: none;
-    margin-left: 50px;
 }
 
 .search-icon {
@@ -77,26 +72,22 @@ h1 {
     align-items: center;
 }
 
-/* Responsive adjustments */
-@media (max-width: 768px) {}
-    .nav-links a {
-        padding-top: 20px;
-        margin: 10px;
-    }
-
-    .search-container {
-        margin-top: 10px;
-        margin-bottom: 10px;
-    }
-
 .search-icon img {
     width: 20px;
     height: 20px;
 }
 
-.search-icon img {
-    width: 20px;
-    height: 20px;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .nav-links a {
+        padding-top: 20px;
+        margin: 10px;
+    }
+
+    .search-bar {
+        width: 90%;
+        margin: 10px auto; /* Centrer horizontalement avec moins de marges */
+    }
 }
 
 .projects {
@@ -135,3 +126,30 @@ h1 {
 }
 
 
+function searchMembers() {
+     Récupérer la valeur saisie dans la barre de recherche
+    var input = document.getElementById('searchInput');
+    var filter = input.value.toUpperCase();
+
+    
+    var projects = document.getElementsByClassName('project-text');
+
+    
+    for (var i = 0; i < projects.length; i++) {
+        var text = projects[i].textContent || projects[i].innerText;
+        if (text.toUpperCase().indexOf(filter) > -1) {
+            projects[i].parentNode.style.display = "";
+        } else {
+            projects[i].parentNode.style.display = "none";
+        }
+    }
+}
+
+() {
+    document.getElementById('searchInput').value = '';
+     Réafficher tous les projets
+    var projects = document.getElementsByClassName('project');
+    for (var i = 0; i < projects.length; i++) {
+        projects[i].style.display = "";
+    }
+}
