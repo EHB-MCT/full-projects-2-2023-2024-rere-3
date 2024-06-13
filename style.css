@@ -1,0 +1,115 @@
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: #FFBF00
+}
+
+main {
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    text-align: center;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px 20px 10px 10px;
+    font-size: 16px;
+    border: 1px solid #000;
+    border-radius: 25px;
+    outline: none;
+}
+
+.search-icon {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-icon img {
+    width: 20px;
+    height: 20px;
+}
+
+#membersList {
+    display: flex;
+    flex-direction: column;
+}
+
+.member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.details {
+    flex-grow: 1;
+}
+
+.details p {
+    margin: 0;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.title, .email {
+    color: gray;
+}
+
+.outer {
+    display: flex;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #FFBF00;
+}
