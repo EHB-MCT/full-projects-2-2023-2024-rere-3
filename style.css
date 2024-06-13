@@ -3,234 +3,133 @@
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
 body {
-	background-color: #faf8f6;
+    background-color: #faf8f6;
 }
 
 nav {
-	padding-top: 0;
-	background-color: #ffbf00;
+    padding-top: 0;
+    background-color: #ffbf00;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 20px;
 }
 
 a {
-	text-decoration: none;
-	color: #fff;
-	font-family: "Nunito", sans-serif;
-	font-weight: bold;
-}
-
-nav a {
-	padding-top: 70px;
-	text-align: center;
-	float: left;
+    text-decoration: none;
+    color: #fff;
+    font-family: "Nunito", sans-serif;
+    font-weight: bold;
 }
 
 .nav-links {
-	float: right;
+    display: flex;
+    align-items: center;
 }
 
 .nav-links a {
-	margin-left: 20px;
-	margin-right: 20px;
+    margin-left: 20px;
+    margin-right: 20px;
 }
 
 nav img {
-	width: 110px;
-	height: 100px;
-	padding-left: 20px;
+    width: 110px;
+    height: 100px;
+    padding-left: 20px;
 }
 
 h1 {
-	font-size: 35px;
-	font-family: "Antonio", sans-serif;
-    text-align: center;
-    margin-right: 110px;
-	
-}
-
-h2 {
-	font-family: "Nunito", sans-serif;
-	font-size: 30px;
-	font-weight: bold;
-}
-
-h3 {
-	font-size: 16px;
-	font-family: "Open Sans", sans-serif;
-}
-
-p {
-	font-family: "Open Sans", sans-serif;
-	font-style: normal;
-	font-size: 15px;
-}
-
-h1,
-h2,
-h3,
-h4,
-p {
-	color: #56544f;
+    font-size: 35px;
+    font-family: "Antonio", sans-serif;
     margin-left: 120px;
+    color: #56544F;
 }
 
-.primary {
-	background-color: #56544f;
-	padding: 20px;
-	margin-left: 15px;
-	margin-right: 80%;
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
 }
 
-.primary a:hover {
-	color: #ffbf00;
-}
-
-.nav-links a:hover {
-	text-decoration: underline;
-	text-decoration-color: #56544f;
-	color: #56544f;
-	text-decoration-thickness: 4px;
-	text-underline-offset: 10px;
-}
-
-.breast-cancer {
-    
-        width: 200px;
-        height: 150px;
-        margin: -0px auto 0; /* Ajustez la valeur de margin-top selon vos besoins */
-        border-radius: 25px;
-        background: #FFBF00;
-        padding: 5px;
-        box-sizing: border-box; 
-        display: flex;
-        justify-content: center;
-        align-items: center;
-    
-    
-}
-
-.breast-cancer img {
-    max-width: 100%; /* Pour que l'image ne dépasse pas le conteneur */
-    max-height: 100%; /* Pour que l'image ne dépasse pas le conteneur */
-    border-radius: 20px; 
-    margin-top: 50px;
-}
-
-.muscle {
-    width: 200px;
-    height: 150px;
-    margin: 0 auto;
-    margin-top: 40px;
+.search-bar input {
+    width: 100%;
+    padding: 10px 20px 10px 10px;
+    font-size: 16px;
+    border: 1px solid #000;
     border-radius: 25px;
-    background: #FFBF00;
-    padding: 5px;
-    box-sizing: border-box; 
+    outline: none;
+    margin-left: 50px;
 }
 
-.muscle img {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 25px; 
+.search-icon {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.movement {
-	width: 200px;
-    height: 140px;
-    margin: 0 auto;
-    margin-top: 40px;
+/* Responsive adjustments */
+@media (max-width: 768px) {}
+    .nav-links a {
+        padding-top: 20px;
+        margin: 10px;
+    }
+
+    .search-container {
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+.search-icon img {
+    width: 20px;
+    height: 20px;
+}
+
+.search-icon img {
+    width: 20px;
+    height: 20px;
+}
+
+.projects {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.project {
+    width: 200px;
+    margin: 20px;
+    text-align: center;
+}
+
+.project-image {
+    width: 100%;
+    height: 150px;
     border-radius: 25px;
     background: #FFBF00;
     padding: 5px;
     box-sizing: border-box;
+    overflow: hidden;
 }
 
-.movement img {
-	width: 100%;
+.project-image img {
+    width: 100%;
     height: 100%;
-    border-radius: 25px; 
-}
-
-.transcranial {
-    width: 200px;
-    height: 200px;
-    margin: 0 auto;
-    margin-top: 40px;
     border-radius: 25px;
-    background: #FFBF00;
-    padding: 5px;
-    box-sizing: border-box; 
 }
 
-.transcranial img {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 25px; 
-}
-
-.fatigue {
-    width: 200px;
-    height: 140px;
-    margin: 0 auto;
-    margin-top: 40px;
-    border-radius: 25px;
-    background: #FFBF00;
-    padding: 5px;
-    box-sizing: border-box; 
-}
-
-.fatigue img {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 25px; 
-}
-
-.knee {
-    width: 200px;
-    height: 140px;
-    margin: 0 auto;
-    margin-top: 40px;
-    border-radius: 25px;
-    background: #FFBF00;
-    padding: 5px;
-    box-sizing: border-box; 
-}
-
-.knee img {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 25px; 
-}
-
-.ghost {
-    width: 150px;
-    height: 170px;
-    margin: 0 auto;
-    margin-top: 40px;
-    border-radius: 25px;
-    background: #FFBF00;
-    padding: 5px;
-    box-sizing: border-box; 
-}
-
-.ghost img {
-    max-width: 100%;
-    max-height: 100%;
-    border-radius: 25px; 
-}
-
-
-.centered-2,
-.centered-3,
-.centered-4,
-.centered-5,
-.centered-6,
-.centered-7 {
-    text-align: center;
-    margin-top: 5px;
-    color: #FFBF00;;
-}
-
-.centered-1 {
-    text-align: center;
-    margin-top: 5px;
+.project-text {
+    margin-top: 10px;
     color: #FFBF00;
+    font-weight: bold;
 }
+

@@ -3,101 +3,82 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Styleguide3</title>
-    <LINK rel="stylesheet" href="style.css">
+    <title>Projects</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
     <header>
-    <nav>
-        <img src="images/Logo_RERE_RGB-removebg.png">
-        <div class="nav-links">
-            <a href="#">Home</a>
-            <a href="#">Members</a>
-            <a href="#">Projects</a>
-            <a href="#">Publications</a>
-            <a href="#">Blog</a>
-            <a href="#">News & Events</a>
-            </nav>
-        </header>
-        </div>
-        
-        <h1>PROJECTS</h1>
-        
-
-        <div class="breast-cancer">
-            
-            <div class="breastcancer">
-                
-                <img src="images/Breast cancer2.webp" alt="Breast cancer">
-                <div class="centered-1">PAIN IN
-                    BREAST CANCER
-                    SURVIVORS</div>
-                    
-
+        <nav>
+            <img src="images/Logo_RERE_RGB-removebg.png">
+            <div class="nav-links">
+                <a href="#">Home</a>
+                <a href="#">Members</a>
+                <a href="#">Projects</a>
+                <a href="#">Publications</a>
+                <a href="#">Blog</a>
+                <a href="#">News & Events</a>
             </div>
-            
-
-        </div>
-        
-        <div class="muscle">
-            
-            <div >
-                <img src="images/Muscle-Activity-in-Virtual-Reality.webp" alt="Mucle Activity">
-                <div class="centered-2">AUGMENTED REALITY MUSCLE</div>
-
-            </div>
-            
-        </div>
-
-        <div class="movement">
-
-            <div>
-                <img src="images/MOVEMENT - EVOKED PAIN.webp" alt="movement">
-                <div class="centered-3">MOVEMENT - EVOKED PAIN</div>
-            </div>
-
-        </div>
-
-        <div class="transcranial">
-            <div>
-                <img src="images/TRANSCRANIAL 2.webp" alt="transcranial">
-                <div class="centered-4">TRANSCRANIAL
-                </div>
-            </div>
-
-        </div>
+        </nav>
+    </header>
     
-        <div class="fatigue">
-            <div>
+    <h1>PROJECTS</h1>
+    
+    <div class="search-bar">
+        <input type="text" id="searchInput" onkeyup="searchMembers()" placeholder="Search for names or job titles..">
+        <div class="search-icon" onclick="clearSearch()">
+            <img src="images/search-svgrepo-com.png" alt="Search">
+        </div>
+    </div>
+
+    <div class="projects">
+        <div class="project breast-cancer">
+            <div class="project-image">
+                <img src="images/Breast cancer2.webp" alt="Breast cancer">
+            </div>
+            <div class="project-text">PAIN IN BREAST CANCER SURVIVORS</div>
+        </div>
+
+        <div class="project muscle">
+            <div class="project-image">
+                <img src="images/Muscle-Activity-in-Virtual-Reality.webp" alt="Muscle Activity">
+            </div>
+            <div class="project-text">AUGMENTED REALITY MUSCLE</div>
+        </div>
+
+        <div class="project movement">
+            <div class="project-image">
+                <img src="images/MOVEMENT - EVOKED PAIN.webp" alt="movement">
+            </div>
+            <div class="project-text">MOVEMENT - EVOKED PAIN</div>
+        </div>
+
+        <div class="project transcranial">
+            <div class="project-image">
+                <img src="images/TRANSCRANIAL 2.webp" alt="transcranial">
+            </div>
+            <div class="project-text">TRANSCRANIAL</div>
+        </div>
+
+        <div class="project fatigue">
+            <div class="project-image">
                 <img src="images/post-stroke-fatigue_ShaneUnsplash.jpg" alt="fatigue">
-                <div class="centered-5">POST-STROKE FATIGUE</div>
             </div>
+            <div class="project-text">POST-STROKE FATIGUE</div>
         </div>
 
-        <div class="knee">
-            <div>
+        <div class="project knee">
+            <div class="project-image">
                 <img src="images/warning-signs-for-osteoarthritis-chris-bailey.jpg" alt="knee">
-                <div class="centered-6">OSTEOARTHRITIS PAIN</div>
             </div>
-
+            <div class="project-text">OSTEOARTHRITIS PAIN</div>
         </div>
 
-
-        <div class="ghost">
-            <div>
+        <div class="project ghost">
+            <div class="project-image">
                 <img src="images/product-list7-img-1.jpg" alt="ghost">
-                <div class="centered-7">GHOST APP GAME</div>
             </div>
+            <div class="project-text">GHOST APP GAME</div>
         </div>
-
-
-
-
-
-
-
-
-
-
+    </div>
 </body>
 </html>
