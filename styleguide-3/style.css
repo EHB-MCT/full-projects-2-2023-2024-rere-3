@@ -1,0 +1,89 @@
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+body {
+	background-color: #faf8f6;
+}
+
+nav {
+	padding-top: 0;
+	background-color: #ffbf00;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+	font-family: "Nunito", sans-serif;
+	font-weight: bold;
+}
+
+nav a {
+	padding-top: 70px;
+	text-align: center;
+	float: left;
+}
+
+.nav-links {
+	float: right;
+}
+
+.nav-links a {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+nav img {
+	width: 110px;
+	height: 100px;
+	padding-left: 20px;
+}
+
+h1 {
+	font-size: 35px;
+	font-family: "Antonio", sans-serif;
+}
+
+h2 {
+	font-family: "Nunito", sans-serif;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 16px;
+	font-family: "Open Sans", sans-serif;
+}
+
+p {
+	font-family: "Open Sans", sans-serif;
+	font-style: normal;
+	font-size: 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+	color: #56544f;
+}
+
+.primary {
+	background-color: #56544f;
+	padding: 20px;
+	margin-left: 15px;
+	margin-right: 80%;
+}
+
+.primary a:hover {
+	color: #ffbf00;
+}
+
+.nav-links a:hover {
+	text-decoration: underline;
+	text-decoration-color: #56544f;
+	color: #56544f;
+	text-decoration-thickness: 4px;
+	text-underline-offset: 10px;
+}
