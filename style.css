@@ -133,7 +133,18 @@ footer {
 	display: flex;
 	margin-right: auto;
 }
-	.half-circle1 img {
-    display: flex;
-    margin-left: auto;
+.half-circle1 img {
+	display: flex;
+	margin-left: auto;
+}
+
+.lab {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.lab2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
 }
