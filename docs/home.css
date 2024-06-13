@@ -111,9 +111,10 @@ p {
 	
 
 .intro h2 {
-	margin-top: 10px;
-	margin-left: 80px;
-	margin-bottom: 20px;
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 3%;
 }
 
 .intro-text p {
@@ -121,10 +122,20 @@ p {
 	font-family: "Open Sans", sans-serif;
 	color: black;
 	margin-left: 50px;
+
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 3%;
 }
 
 .intro-text a {
 	color: #56544f;
+
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 3%;
 }
 
 span {
@@ -138,6 +149,8 @@ span {
 	width: 200px;
 	margin-left: 80px;
 }
+
+
 
 .members h3 {
 	margin-left: 130px;
