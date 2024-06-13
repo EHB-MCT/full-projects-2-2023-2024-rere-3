@@ -125,3 +125,15 @@ footer {
 	background-color: #ffbf00;
 	padding: 50px 50px 20px 200px;
 }
+.half-circle3 img {
+	display: flex;
+	margin-left: auto;
+}
+.half-circle2 img {
+	display: flex;
+	margin-right: auto;
+}
+	.half-circle1 img {
+    display: flex;
+    margin-left: auto;
+}
