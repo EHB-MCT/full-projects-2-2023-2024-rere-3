@@ -125,7 +125,7 @@ h1 {
     font-family: "Open Sans", sans-serif;
 }
 
-
+/* 
 function searchMembers() {
      Récupérer la valeur saisie dans la barre de recherche
     var input = document.getElementById('searchInput');
@@ -152,7 +152,7 @@ function searchMembers() {
     for (var i = 0; i < projects.length; i++) {
         projects[i].style.display = "";
     }
-}
+} */
 
 .outer {
     background-color: #ffbf00;
