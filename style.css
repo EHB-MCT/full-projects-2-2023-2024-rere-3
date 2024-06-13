@@ -1,3 +1,40 @@
+
+/* body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.container {
+    padding: 20px;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 40px;
+}
+
+.menu-icon {
+    font-size: 24px;
+    cursor: pointer;
+    color: #FFBF00
+}
+
+main {
+    margin-top: 20px;
+}
+
+h1 {
+    font-size: 24px;
+    text-align: center;
+} */
+
+
+
 @import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
@@ -7,11 +44,11 @@ body {
 }
 
 nav {
-    padding-top: 0;
-    background-color: #ffbf00;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+	padding-top: 0;
+	background-color: #ffbf00;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
 }
 
 a {
@@ -43,6 +80,20 @@ nav img {
     padding-left: 20px;
 }
 
+.hamburger {
+	display: none;
+	flex-direction: column;
+	cursor: pointer;
+}
+
+.hamburger .line {
+	width: 25px;
+	height: 3px;
+	background-color: #fff;
+	margin: 4px;
+	transition: all 0.3s;
+}
+
 h1 {
     font-size: 35px;
     font-family: "Antonio", sans-serif;
@@ -66,7 +117,14 @@ p {
     font-style: normal;
     font-size: 15px;
 }
-
+.LabImage {
+	display: flex;
+	justify-content: center;
+}
+.LabImage2 {
+	display: flex;
+	justify-content: center;
+}
 h1,
 h2,
 h3,
@@ -211,3 +269,143 @@ p {
     }
 }
 
+@media screen and (max-width: 768px) {
+	.hamburger {
+		display: flex;
+	}
+
+	.nav-links {
+		display: none;
+		flex-direction: column;
+		width: 100%;
+		background-color: #ffbf00;
+		position: absolute;
+		top: 100px;
+		left: 0;
+	}
+
+	.nav-links a {
+		margin: 15px 0;
+		text-align: center;
+		padding: 10px;
+	}
+
+	.nav-links.show {
+		display: flex;
+	}
+}
+footer {
+	background-color: #ffbf00;
+	padding: 50px 50px 20px 200px;
+}
+.half-circle3 img {
+	display: flex;
+	margin-left: auto;
+}
+.half-circle2 img {
+	display: flex;
+	margin-right: auto;
+}
+.half-circle1 img {
+	display: flex;
+	margin-left: auto;
+}
+
+.lab {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.lab2 {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    width: 80%;
+    max-width: 600px;
+    position: relative;
+    margin: 20px 0; /* Centrer horizontalement */
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px 20px 10px 10px;
+    font-size: 16px;
+    border: 1px solid #000;
+    border-radius: 25px;
+    outline: none;
+}
+
+.search-icon {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.search-icon img {
+    width: 20px;
+    height: 20px;
+}
+#membersList {
+    display: flex;
+    flex-direction: column;
+}
+
+.member {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+    object-fit: cover;
+}
+
+.details {
+    flex-grow: 1;
+}
+
+.details p {
+    margin: 0;
+}
+
+.name {
+    font-weight: bold;
+}
+
+.title, .email {
+    color: gray;
+}
+
+.outer {
+    display: flex;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #FFBF00;
+}
+
+.back-arrow a {
+    text-decoration: none;
+    font-size: 24px; 
+    color: inherit; 
+}
