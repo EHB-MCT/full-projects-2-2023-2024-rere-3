@@ -113,3 +113,7 @@ h1 {
     box-sizing: border-box;
     background-color: #FFBF00;
 }
+
+.a {
+    font-style: none    ;
+}
