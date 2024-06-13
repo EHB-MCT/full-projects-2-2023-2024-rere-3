@@ -13,6 +13,7 @@ body {
 }
 .logo {
     height: 40px;
+    width: 40px;
 }
 .menu {
     font-size: 24px;
@@ -49,6 +50,31 @@ body {
 }
 .biography {
     text-align: center;
-    font-size: 12px;
+    font-size: 18px;
+}
+
+.outer {
+    display: flex;
+    justify-content: center;
+    color: white;
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    box-sizing: border-box;
+    background-color: #FFBF00;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+.container {
+    flex: 1;
 }
 
