@@ -1,44 +1,65 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Vacatures</title>
-    <link rel="stylesheet" href="style.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <img src="images/Logo_RERE_RGB-removebg.png" alt="Logo">
-            <div class="nav-links">
-                <a href="#">Home</a>
-                <a href="#">Members</a>
-                <a href="#">Projects</a>
-                <a href="#">Publications</a>
-                <a href="#">Blog</a>
-                <a href="#">News & Events</a>
-            </div>
-        </nav>
-    </header>
-    
-    <h1>VACATURES</h1>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Vacatures</title>
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="style-hamburger.css" />
+	</head>
+	<body>
+		<header>
+			<nav>
+				<img src="images/images-home/Logo_RERE_RGB.png" />
+				<div class="menu-icon" id="menu-icon">&#9776;</div>
+			</nav>
+		</header>
 
-    <div class="buttons-container">
-        <input type="button" class="button open-sans" value="PHD">
-        <input type="button" class="button-2 open-sans" value="PHYSICAL THERAPIST">
-    </div>
+		<h1>VACATURES</h1>
 
-    <h3>CONTACT</h3>
+		<div class="buttons-container">
+			<input type="button" class="button open-sans" value="PHD" />
+			<input
+				type="button"
+				class="button-2 open-sans"
+				value="PHYSICAL THERAPIST"
+			/>
+		</div>
 
-    <div class="contacts-container">
-        <button class="button-3 open-sans"><img src="/images/Phone.png" class="img">+123 456 789 234</button>
-        <button class="button-4 open-sans"><img src="/images/home.png" class="img">vub.researches@gmail.com</button>
-    </div>
+		<h3>CONTACT</h3>
 
-    <footer class="outer">
-        <img src="images/Group_256.png">
-        <p>Laarbeeklaan 121 1090 Jette </p>
-    </footer>
-
-</body>
+		<div class="contacts-container">
+			<button class="button-3 open-sans">
+				<img src="/images/Phone.png" class="img" />+123 456 789 234
+			</button>
+			<button class="button-4 open-sans">
+				<img src="/images/home.png" class="img" />vub.researches@gmail.com
+			</button>
+		</div>
+		<nav class="menu" id="menu">
+			<a href="#" class="menu-close" id="menu-close">&times;</a>
+			<a href="home.html" class="menu-item">HOME</a>
+			<a href="members.html" class="menu-item">MEMBERS</a>
+			<a href="project.html" class="menu-item">PROJECTS</a>
+			<a href="our lab.html" class="menu-item">OUR LAB</a>
+			<a href="vacatures.html" class="menu-item">VACATURES</a>
+			<div class="menu-footer">
+				<p>Laarbeeklaan 121 1090 Jette</p>
+				<p>024774420</p>
+				<div class="social-icons">
+					<a href="#"><img src="instagram-icon.png" alt="Instagram" /></a>
+					<a href="#"><img src="twitter-icon.png" alt="Twitter" /></a>
+					<a href="#"><img src="facebook-icon.png" alt="Facebook" /></a>
+				</div>
+			</div>
+		</nav>
+		<footer class="outer">
+			<img src="images/Group_256.png" />
+			<p>Laarbeeklaan 121 1090 Jette</p>
+		</footer>
+		<script src="script-ms.js"></script>
+		<script src="script-hamburger.js"></script>
+	</body>
 </html>
+<script src="script-ms.js"></script>
+<script src="script-hamburger.js"></script>

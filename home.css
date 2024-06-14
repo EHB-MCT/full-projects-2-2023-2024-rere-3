@@ -29,10 +29,10 @@ nav a {
 	float: right;
 }
 
-.nav-links a {
+/* .nav-links a {
 	margin-left: 20px;
 	margin-right: 20px;
-}
+} */
 
 nav img {
 	width: 110px;
@@ -103,12 +103,10 @@ p {
 	margin-right: auto;
 }
 
-.half-circle3 img{
+.half-circle3 img {
 	display: flex;
 	margin-left: auto;
 }
-	
-	
 
 .intro h2 {
 	text-align: center;
@@ -116,8 +114,6 @@ p {
 	justify-content: center;
 	margin-bottom: 3%;
 }
-
-
 
 .intro-text p {
 	font-size: 20px;
@@ -128,9 +124,7 @@ p {
 	flex-direction: column;
 	justify-content: center;
 	margin-bottom: 3%;
-
 }
-
 
 span {
 	color: #56544f;
@@ -150,17 +144,11 @@ span {
 	display: flex;
 }
 
-
-
 .members h3 {
-	
 	font-size: 25px;
 	margin-bottom: 10px;
 	display: flex;
 	align-content: space-between;
-	
-
-	
 }
 
 .members p {
@@ -174,7 +162,6 @@ span {
 	display: flex;
 	justify-content: center;
 	margin-bottom: 3%;
-
 }
 
 footer {
@@ -223,7 +210,6 @@ nav img {
 	width: 25px;
 	height: 3px;
 	background-color: #fff;
-	margin: 4px;
 	transition: all 0.3s;
 }
 
@@ -298,11 +284,10 @@ p {
 		padding: 10px;
 	}
 
-	.nav-links.show{
+	.nav-links.show {
 		display: flex;
 	}
 }
-	
 
 .outer {
 	display: flex;
@@ -325,13 +310,12 @@ p {
 	color: #fff;
 }
 
-.members{
+.members {
 	text-align: center;
-    display: flex;
-    justify-content: flex-start;
-    margin-bottom: 3%;
-    flex-direction: column;
-    align-items: center;
-    flex-wrap: nowrap;
+	display: flex;
+	justify-content: flex-start;
+	margin-bottom: 3%;
+	flex-direction: column;
+	align-items: center;
+	flex-wrap: nowrap;
 }
-

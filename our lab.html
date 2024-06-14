@@ -1,18 +1,15 @@
 <head>
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-	<title>Styleguide3</title>
+	<title>our lab</title>
 	<link rel="stylesheet" href="style.css" />
+	<link rel="stylesheet" href="style-hamburger.css" />
 </head>
 <body>
 	<header>
 		<nav>
 			<img src="images/Logo_RERE_RGB.png" />
-			<div class="hamburger" onclick="toggleMenu()">
-				<div class="line"></div>
-				<div class="line"></div>
-				<div class="line"></div>
-			</div>
+			<div class="menu-icon" id="menu-icon">&#9776;</div>
 			<div class="nav-links" id="nav-links">
 				<a href="#">Home</a>
 				<a href="#">Members</a>
@@ -30,7 +27,7 @@
 		<img src="images/Group_252.png" />
 	</div>
 	<div class="LabImage">
-		<img src="images/Group 249.png" />
+		<img src="images/lab1foto.png" />
 	</div>
 	<div class="half-circle2">
 		<img src="images/Group_253.png" />
@@ -72,6 +69,25 @@
 			and impact on physical and mental well-being.
 		</p>
 	</div>
+
+	<nav class="menu" id="menu">
+		<a href="#" class="menu-close" id="menu-close">&times;</a>
+		<a href="home.html" class="menu-item">HOME</a>
+		<a href="members.html" class="menu-item">MEMBERS</a>
+		<a href="project.html" class="menu-item">PROJECTS</a>
+		<a href="our lab.html" class="menu-item">OUR LAB</a>
+		<a href="vacatures.html" class="menu-item">VACATURES</a>
+		<div class="menu-footer">
+			<p>Laarbeeklaan 121 1090 Jette</p>
+			<p>024774420</p>
+			<div class="social-icons">
+				<a href="#"><img src="instagram-icon.png" alt="Instagram" /></a>
+				<a href="#"><img src="twitter-icon.png" alt="Twitter" /></a>
+				<a href="#"><img src="facebook-icon.png" alt="Facebook" /></a>
+			</div>
+		</div>
+	</nav>
+
 	<div class="outer-wrapper">
 		<div class="footer">
 			<footer>
@@ -79,4 +95,10 @@
 			</footer>
 		</div>
 	</div>
+	<script src="script-ms.js"></script>
+	<script src="script-hamburger.js"></script>
+	<footer class="outer">
+		<img src="images/Group_256.png" />
+		<p>Laarbeeklaan 121 1090 Jette</p>
+	</footer>
 </body>

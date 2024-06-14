@@ -1,0 +1,224 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Members List</title>
+    <link rel="stylesheet" href="members.css">
+    <link rel="stylesheet" href="style-hamburger.css">
+</head>
+<body>
+
+<div class="container">
+        <header class="header-member">
+            <img src="images/vub_logo.png" alt="VUB Logo" class="logo">
+            <div class="menu-icon" id="menu-icon">&#9776;</div>
+        </header>
+        <main>
+            <h1>MEMBERS</h1>
+            <div class="search-bar">
+              <input type="text" id="searchInput" onkeyup="searchMembers()" placeholder="Search for names or job titles..">
+              <div class="search-icon" onclick="clearSearch()">
+                  <img src="images/search_icon.png" alt="Search">
+              </div>
+            </div>
+            <div id="membersList">
+                <div class="member" data-id="1">
+                  <a href="member_selected.html?id=1">
+                    <img src="images/members/Principle Investigators/RERE_010.jpg" alt="Member Avatar" class="avatar">
+                  </a>
+                    <div class="details">
+                        <p class="name">Nele Adrianssens</p>
+                        <p class="title">Principle Investigator</p>
+                        <p class="email">Nele.Adriaenssens@vub.be</p>
+                    </div>
+                </div>
+                <div class="member" data-id="2">
+                  <a href="member_selected.html?id=2">
+                    <img src="images/members/Principle Investigators/FRIA_013.jpg" alt="Member Avatar" class="avatar">
+                  </a>
+                    <div class="details">
+                        <p class="name">David Beckwée</p>
+                        <p class="title">Principle Investigator</p>
+                        <p class="email">David.Beckwee@vub.be</p>
+                    </div>
+                </div>
+                <div class="member" data-id="3">
+                  <a href="member_selected.html?id=3">
+                    <img src="images/members/Principle Investigators/RERE_034.jpg" alt="Member Avatar" class="avatar">
+                  </a>
+                    <div class="details">
+                        <p class="name">Marc Degelaen</p>
+                        <p class="title">Principle Investigator</p>
+                        <p class="email">Marc.Degelaen@vub.be</p>
+                    </div>
+                </div>
+                <div class="member" data-id="4">
+                  <a href="member_selected.html?id=4">
+                    <img src="images/members/Principle Investigators/RERE_008.jpg" alt="Member Avatar" class="avatar">
+                  </a>
+                    <div class="details">
+                        <p class="name">Eva Swinnen</p>
+                        <p class="title">Principle Investigator</p>
+                        <p class="email">Eva.Swinnen@vub.be</p>
+                    </div>
+                </div>
+                <div class="member" data-id="5">
+                  <img src="images/members/Principle Investigators/Filip.jpg" alt="Member Avatar" class="avatar">
+                  <div class="details">
+                      <p class="name">Filip Van Ginderdeuren</p>
+                      <p class="title">Principle Investigator</p>
+                      <p class="email">Filip.Van.Ginderdeuren@vub.be</p>
+                  </div>
+              </div>
+              <div class="member" data-id="6">
+                <img src="images/members/Emereti/Eric.jpg" alt="Member Avatar" class="avatar">
+                <div class="details">
+                    <p class="name">Eric Kerckhofs</p>
+                    <p class="title">Emereti</p>
+                    <p class="email">Eric.Kerckhofs@vub.be</p>
+                </div>
+            </div>
+            <div class="member" data-id="7">
+              <img src="images/members/Emereti/Pierre Lievens.png" alt="Member Avatar" class="avatar">
+              <div class="details">
+                  <p class="name">Pierre Lievens</p>
+                  <p class="title">Emeriti</p>
+                  <p class="email">plievens@vub.ac.be</p>
+              </div>
+          </div>
+          <div class="member" data-id="8">
+            <img src="images/members/Emereti/Peter.jpg" alt="Member Avatar" class="avatar">
+            <div class="details">
+                <p class="name">Peter Vaes</p>
+                <p class="title">Emereti</p>
+                <p class="email">pvaes@vub.be</p>
+            </div>
+        </div>
+        <div class="member" data-id="9">
+          <img src="images/members/researcher/Rahel Caliesch.jpg" alt="Member Avatar" class="avatar">
+          <div class="details">
+              <p class="name">Rahel Caliesch</p>
+              <p class="title">PhD Researcher</p>
+              <p class="email">rahel.caliesch@vub.be</p>
+          </div>
+      </div>
+      <div class="member" data-id="10">
+        <img src="images/members/researcher/159922369.jpg" alt="Member Avatar" class="avatar">
+        <div class="details">
+            <p class="name">Ruben Debeuf</p>
+            <p class="title">PhD Researcher</p>
+            <p class="email">Ruben.Debeuf@vub.be</p>
+        </div>
+    </div>
+    <div class="member" data-id="11">
+      <img src="avatar_placeholder.png" alt="Member Avatar" class="avatar">
+      <div class="details">
+          <p class="name">Christophe Eechaute</p>
+          <p class="title">Postdoctoral Researcher</p>
+          <p class="email">E-MAIL ADRESS</p>
+      </div>
+  </div>
+  <div class="member" data-id="12">
+    <img src="images/members/researcher/RERE_020.jpg" alt="Member Avatar" class="avatar">
+    <div class="details">
+        <p class="name">Mahyar Firouzi</p>
+        <p class="title">PhD Researcher</p>
+        <p class="email">Mahyar.Firouzi@vub.be</p>
+    </div>
+</div>
+<div class="member" data-id="13">
+  <img src="avatar_placeholder.png" alt="Member Avatar" class="avatar">
+  <div class="details">
+      <p class="name">Katia Giacomino</p>
+      <p class="title">PhD Researcher</p>
+      <p class="email">katia.giacomino@hevs.ch</p>
+  </div>
+</div>
+<div class="member" data-id="14">
+  <img src="images/members/researcher/Astrid 2.jpg" alt="Member Avatar" class="avatar">
+  <div class="details">
+      <p class="name">Astrid Lahousse</p>
+      <p class="title">PhD Researcher</p>
+      <p class="email">Astrid.Lucie.Lahousse@vub.be</p>
+  </div>
+</div>
+<div class="member" data-id="15">
+  <img src="images/members/researcher/RERE_014.jpg" alt="Member Avatar" class="avatar">
+  <div class="details">
+      <p class="name">Lynn Leemans</p>
+      <p class="title">Postdoctoral Researcher</p>
+      <p class="email">Lynn.Leemans@vub.be</p>
+  </div>
+</div>
+<div class="member" data-id="16">
+  <img src="images/members/researcher/Sofie.jpg" alt="Member Avatar" class="avatar">
+  <div class="details">
+      <p class="name">Sofie Puts</p>
+      <p class="title">PhD Researcher</p>
+      <p class="email">Sofie.Puts@vub.be</p>
+  </div>
+</div>
+<div class="member" data-id="17">
+  <img src="images/members/researcher/Eva Roose.jpg" alt="Member Avatar" class="avatar">
+  <div class="details">
+      <p class="name">Eva Roose</p>
+      <p class="title">PhD Researcher</p>
+      <p class="email">Eva.Charlotte.S.Roose@vub.be</p>
+  </div>
+</div>
+<div class="member" data-id="18">
+  <img src="images/members/researcher/RERE_027.jpg" alt="Member Avatar" class="avatar">
+  <div class="details">
+      <p class="name">An Tassenoy</p>
+      <p class="title">Postdoctoral Researcher</p>
+      <p class="email">An.Tassenoy@vub.be</p>
+  </div>
+</div>
+<div class="member" data-id="19">
+  <img src="images/members/researcher/RERE_004.jpg" alt="Member Avatar" class="avatar">
+  <div class="details">
+      <p class="name">Manuel Triniad-Fernàndez</p>
+      <p class="title">PhD Researcher</p>
+      <p class="email">Manuel.Trinidad-Fernandez@vub.be</p>
+  </div>
+</div>
+<div class="member" data-id="20">
+  <img src="images/members/researcher/silvia_photo.jpg" alt="Member Avatar" class="avatar">
+  <div class="details">
+      <p class="name">Silvia Zaccardi</p>
+      <p class="title">PhD Researcher</p>
+  </div>
+</div>
+            </div>
+
+    <nav class="menu" id="menu">
+      <a href="#" class="menu-close" id="menu-close">&times;</a>
+      <a href="home.html" class="menu-item">HOME</a>
+      <a href="members.html" class="menu-item">MEMBERS</a>
+      <a href="project.html" class="menu-item">PROJECTS</a>
+      <a href="our lab.html" class="menu-item">OUR LAB</a>
+      <a href="vacatures.html" class="menu-item">VACATURES</a>
+       <div class="menu-footer">
+          <p>Laarbeeklaan 121 1090 Jette</p>
+          <p>024774420</p>
+          <div class="social-icons">
+              <a href="#"><img src="instagram-icon.png" alt="Instagram"></a>
+              <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+              <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+          </div> 
+      </div>
+  </nav>
+
+
+    <footer class="outer">
+
+      <img src="images/Group_256.png">
+      <p>Laarbeeklaan 121 1090 Jette </p>
+
+</footer>
+    <script src="script.js"></script>
+    <script src="script-hamburger.js"></script>
+</body>
+</html>
