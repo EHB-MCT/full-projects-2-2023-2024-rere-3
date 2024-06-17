@@ -180,6 +180,7 @@ p {
 	color: white;
 	padding: 20px 50px;
 	margin: 10px;
+	margin-top: 10px;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
@@ -230,7 +231,7 @@ p {
 }
 
 p {
-	color: black;
+	color: white;
 }
 
 .img {
@@ -323,6 +324,8 @@ p {
 	max-width: 600px;
 	position: relative;
 	margin: 20px 0; /* Centrer horizontalement */
+    margin-left: 450px;
+    
 }
 
 .search-bar input {
@@ -367,39 +370,40 @@ p {
 }
 
 .projects {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 colonnes de largeur égale */
+    gap: 20px; /* Espacement entre les éléments */
+    justify-items: center; /* Centre les éléments dans les colonnes */
 }
 
 .project {
-	width: 200px;
-	margin: 20px;
-	text-align: center;
+    width: 200px;
+    text-align: center;
 }
 
 .project-image {
-	width: 100%;
-	height: 150px;
-	border-radius: 25px;
-	background: #ffbf00;
-	padding: 5px;
-	box-sizing: border-box;
-	overflow: hidden;
+    width: 100%;
+    height: 150px;
+    border-radius: 25px;
+    background: #ffbf00;
+    padding: 5px;
+    box-sizing: border-box;
+    overflow: hidden;
 }
 
 .project-image img {
-	width: 100%;
-	height: 100%;
-	border-radius: 25px;
+    width: 100%;
+    height: 100%;
+    border-radius: 25px;
 }
 
 .project-text {
-	margin-top: 10px;
-	color: #ffbf00;
-	font-weight: bold;
-	font-family: "Open Sans", sans-serif;
+    margin-top: 10px;
+    color: #ffbf00;
+    font-weight: bold;
+    font-family: "Open Sans", sans-serif;
 }
+
 
 /* 
 function searchMembers() {
@@ -437,21 +441,20 @@ function searchMembers() {
 	text-align: center;
 	width: 100%;
 	box-sizing: border-box;
+	margin-top: 200px;
 }
 
+/* Responsive adjustments */
 @media (max-width: 768px) {
-	.outer {
-		padding: 10px;
-		font-size: 14px;
-	}
+    .projects {
+        grid-template-columns: repeat(2, 1fr); /* 2 colonnes sur des écrans plus petits */
+    }
 }
 
 @media (max-width: 480px) {
-	.outer {
-		padding: 5px;
-		font-size: 12px;
-	}
-}
+    .projects {
+        grid-template-columns: 1fr; /* 1 colonne sur des écrans très petits */
+    }
 
 #membersList {
 	display: flex;
