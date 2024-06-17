@@ -1,0 +1,51 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f8f8;
+}
+.back-arrow {
+
+    margin: 20px 0;
+    text-align: center;
+}
+.back-arrow img {
+    text-align: center;
+    width: 30px;
+}
+.image-section {
+    text-align: center;
+}
+.image-section img {
+    width: 50%;
+    border-radius: 20px;
+    border: 5px solid #ffcc00;
+}
+.project-title {
+    text-align: center;
+    font-weight: bold;
+    margin: 20px 0;
+}
+.textbox {
+    background-color: #ccc;
+    margin-left: 20px;
+    margin-right: 20px;
+    padding: 20px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+}
+.teams {
+    margin-bottom: 20px;
+}
+.teams h3 {
+    margin: 0 0 10px 0;
+}
+.funding {
+    text-align: center;
+}
+.funding img {
+    width: 100px;
+}
+.footer p {
+    margin: 0;
+}
