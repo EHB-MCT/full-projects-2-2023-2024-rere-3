@@ -511,6 +511,7 @@ function searchMembers() {
 	padding: 20px;
 	box-sizing: border-box;
 	background-color: #ffbf00;
+	margin-top: 450px;
 }
 
 .back-arrow a {
@@ -521,6 +522,22 @@ function searchMembers() {
 
 
 .main_map {
-	margin-top: 1 00px;
+	margin-top: 100px;
 	
 } 
+
+.map-container iframe {
+	width: 100%; /* Largeur de l'iframe à 100% du conteneur */
+	height: 500%; /* Hauteur de l'iframe à 100% du conteneur */
+	border: 0; /* Supprime la bordure de l'iframe */
+}
+
+.map-container {
+	position: relative; /* Position relative pour gérer les dimensions */
+	width: 100%; /* Largeur du conteneur (ajustez selon vos besoins) */
+	height: 90vh; /* Hauteur du conteneur (ajustez selon vos besoins) */
+	max-width: 1517px; /* Largeur maximale du conteneur */
+	max-height: 100px; /* Hauteur maximale du conteneur */
+	border: 1px solid #ccc; /* Bordure optionnelle */
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre pour effet visuel */
+}
