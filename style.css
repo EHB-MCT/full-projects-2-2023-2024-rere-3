@@ -190,19 +190,27 @@ p {
 	height: 60px;
 }
 
-.button-3 {
-	background-color: #ffbf00;
-	border: none;
-	color: white;
+.nummer {
+	color: black;
 	padding: 15px 50px;
 	margin: 10px;
 	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	border-radius: 0;
-	width: 350px;
-	height: 60px;
+}
+
+.nummer img {
+	background-color: #ffbf00;
+	
+}
+
+.email-vub {
+	color: black;
+	padding: 15px 50px;
+	margin: 10px;
+	text-align: center;
+}
+
+.email-vub img {
+	background-color: #ffbf00;
 }
 
 .button-3 img {
@@ -455,6 +463,7 @@ function searchMembers() {
     .projects {
         grid-template-columns: 1fr; /* 1 colonne sur des écrans très petits */
     }
+}
 
 #membersList {
 	display: flex;
@@ -508,3 +517,9 @@ function searchMembers() {
 	font-size: 24px;
 	color: inherit;
 }
+
+
+.main_map {
+	margin-top: 1 00px;
+	
+} 
