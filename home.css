@@ -264,7 +264,7 @@ p {
 	gap: 25px;
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
 	.hamburger {
 		display: flex;
 	}
@@ -321,8 +321,11 @@ p {
 	flex-wrap: nowrap;
 }
 
+
 .members-content{
 	display: flex;	
+	float: left;
+	margin-top: 50%;
 }
 
 .members-button{
@@ -374,6 +377,7 @@ p {
 	.half-circle3{
 		position: absolute;
 		margin-left: 30%;
+		
 
 	}
 
@@ -395,8 +399,28 @@ p {
 
 
 
+
 @media (min-width:768px) {
 	.menu-icon{
 		display: none;
 	}
+
+	.events img{
+		display: none;
+	}
+}
+
+.events img{
+	width: 300px;
+	display: inline;
+	
+	margin-right: 90px;
+	height: 200px;
+	margin-top: 50px;
+	margin-left: 150px;
+	float: left;
+	background-color: #ffbf00;
+	padding: 20px;
+	padding-bottom: 50PX;
+	padding-top: 50px;
 }
