@@ -1,0 +1,164 @@
+@import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+body{
+    background-color: #faf8f6;
+}
+
+nav{
+	padding-top: 0%;
+	background-color: #ffbf00;
+	padding: 10px;
+	padding-bottom: 0;
+}
+
+a{
+    text-decoration: none;
+    color: #fff;
+    font-weight: bold;
+    font-family: "Nunito", sans-serif;
+}
+
+nav a{
+    padding-top: 70px;
+    text-align: center;
+    float: left;
+}
+
+.nav-links{
+    float: right;
+}
+
+.nav-links a{
+    margin-left: 20px;
+    margin-right: 20px;
+}
+
+nav img{
+	padding-top: 0;
+    width: 110px;
+    height: 100px;
+    padding-left: 20px;
+    padding-bottom: 0%;
+	
+   
+   
+    
+}
+
+h1 {
+	font-size: 35px;
+	font-family: "Antonio", sans-serif;
+}
+
+h2 {
+	font-family: "Nunito", sans-serif;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+h3 {
+	font-size: 16px;
+	font-family: "Open Sans", sans-serif;
+}
+
+p {
+	font-family: "Open Sans", sans-serif;
+	font-style: normal;
+	font-size: 15px;
+}
+
+h1,
+h2,
+h3,
+h4,
+p {
+	color: #56544f;
+}
+
+.nav-links a:hover {
+	text-decoration: underline;
+	text-decoration-color: #56544f;
+	color: #56544f;
+	text-decoration-thickness: 4px;
+	text-underline-offset: 10px;
+}
+
+@media screen and (max-width: 768px) {
+	.hamburger {
+		display: flex;
+	}
+
+	.nav-links {
+		display: none;
+		flex-direction: column;
+		width: 100%;
+		background-color: #ffbf00;
+		position: absolute;
+		top: 100px;
+		left: 0;
+	}
+
+	.nav-links a {
+		margin: 15px 0;
+		text-align: center;
+		padding: 10px;
+	}
+
+	.nav-links.show {
+		display: flex;
+	}
+}
+
+.events h1{
+	align-items: center;
+	text-align: center;
+	margin-left: 30%;
+}
+
+.events img{
+	width: 300px;
+	display: inline;
+
+	margin-right: 90px;
+	height: 200px;
+	margin-top: 50px;
+	margin-left: 90px;
+	float: left;
+}
+
+
+
+footer {
+	background-color: #ffbf00;
+	margin-bottom: 50px;
+}
+
+
+.outer {
+	display: flex;
+	justify-content: center;
+	margin: 100%;
+	margin-bottom: 0%;
+	margin-left: 0%;
+	margin-right: 0%;
+	flex-direction: column;
+	align-items: center;
+	padding: 20px;
+	box-sizing: border-box;
+	padding-bottom: 20px;
+	color: #ffffff;
+	text-align: center;
+	width: 100%;
+}
+
+
+
+.outer p {
+	text-align: center;
+	display: flex;
+	justify-content: center;
+	margin-bottom: 3%;
+	color: #fff;
+}
