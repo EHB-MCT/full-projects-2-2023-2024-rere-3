@@ -51,28 +51,3 @@ function displayMembers(records) {
     });
 }
 
-function searchMembers() {
-    const input = document.getElementById('searchInput');
-    const filter = input.value.toLowerCase();
-    const members = document.getElementsByClassName('member');
-
-    Array.from(members).forEach(member => {
-        const name = member.querySelector('.name').textContent.toLowerCase();
-        const title = member.querySelector('.title').textContent.toLowerCase();
-
-        if (name.includes(filter) || title.includes(filter)) {
-            member.style.display = '';
-        } else {
-            member.style.display = 'none';
-        }
-    });
-}
-
-function clearSearch() {
-    document.getElementById('searchInput').value = '';
-    searchMembers();
-}
-
-document.addEventListener('DOMContentLoaded', () => {
-    initializePocketBaseAndFetchMembers();
-});

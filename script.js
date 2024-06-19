@@ -2,13 +2,12 @@
 function searchMembers() {
     const input = document.getElementById('searchInput');
     const filter = input.value.trim().toLowerCase();
-    const members = document.querySelectorAll('.member');
+    const members = document.querySelectorAll('#images-container .member-card');
 
     members.forEach(member => {
-        const name = member.querySelector('.name').textContent.toLowerCase();
-        const title = member.querySelector('.title').textContent.toLowerCase();
+        const info = member.querySelector('.member-info').textContent.toLowerCase();
 
-        if (name.includes(filter) || title.includes(filter)) {
+        if (info.includes(filter)) {
             member.style.display = '';
         } else {
             member.style.display = 'none';
