@@ -2,49 +2,45 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
 
-body{
-    background-color: #faf8f6;
+body {
+	background-color: #faf8f6;
 }
 
-nav{
+nav {
 	padding-top: 0%;
 	background-color: #ffbf00;
 	padding: 10px;
 	padding-bottom: 0;
 }
 
-a{
-    text-decoration: none;
-    color: #fff;
-    font-weight: bold;
-    font-family: "Nunito", sans-serif;
+a {
+	text-decoration: none;
+	color: #fff;
+	font-weight: bold;
+	font-family: "Nunito", sans-serif;
 }
 
-nav a{
-    padding-top: 70px;
-    text-align: center;
-    float: left;
+nav a {
+	padding-top: 70px;
+	text-align: center;
+	float: left;
 }
 
-.nav-links{
-    float: right;
+.nav-links {
+	float: right;
 }
 
-.nav-links a{
-    margin-left: 20px;
-    margin-right: 20px;
+.nav-links a {
+	margin-left: 20px;
+	margin-right: 20px;
 }
 
-nav img{
+nav img {
 	padding-top: 0;
-    width: 110px;
-    height: 100px;
-    padding-left: 20px;
-    padding-bottom: 0%;
-	
-   
-   
-    
+	width: 110px;
+	height: 100px;
+	padding-left: 20px;
+	padding-bottom: 0%;
 }
 
 h1 {
@@ -85,24 +81,6 @@ p {
 	text-underline-offset: 10px;
 }
 
-
-.events h1{
-	align-items: center;
-	text-align: center;
-	margin-left: 15px;
-}
-
-.events img{
-	width: 300px;
-	display: flex;
-	
-	margin-right: 90px;
-	height: 200px;
-	margin-top: 50px;
-	margin-left: 150px;
-	float: left;
-}
-	
 .outer {
 	background-color: #ffbf00;
 	color: #ffffff;
@@ -112,17 +90,49 @@ p {
 	box-sizing: border-box;
 	margin-top: 100%;
 	padding-bottom: 50px;
-
 }
 
-
-
-
-
-
-
-
-.menu-icon{
+.menu-icon {
 	float: right;
 }
 
+.container {
+	max-width: 800px;
+	margin: auto;
+}
+
+.image-container img {
+	width: 300px;
+	height: 200px;
+	
+}
+
+.image-container {
+	max-width: 100%;
+	display: flex;
+	gap: 50px;
+}
+
+.image-container {
+	display: flex;
+	width: 100%;
+	flex-direction: row;
+	gap: 50px;
+	justify-content: center;
+}
+
+.image-item {
+	display: flex;
+	flex-direction: column;
+	text-align: center;
+	margin: 10px;
+}
+
+
+.image-caption{
+	background-color: #ffbf00;
+	border-bottom-left-radius: 40px;
+	border-bottom-right-radius: 40px;
+	padding: 10px;
+	text-align: center;
+}
