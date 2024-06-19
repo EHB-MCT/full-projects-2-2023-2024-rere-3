@@ -104,7 +104,6 @@ p {
 .image-container img {
 	width: 300px;
 	height: 200px;
-	
 }
 
 .image-container {
@@ -128,8 +127,7 @@ p {
 	margin: 10px;
 }
 
-
-.image-caption{
+.image-caption {
 	background-color: #ffbf00;
 	border-bottom-left-radius: 40px;
 	border-bottom-right-radius: 40px;
@@ -137,13 +135,81 @@ p {
 	text-align: center;
 }
 
-.image-caption h3{
+.image-caption h3 {
 	text-align: start;
 	margin-left: 30px;
 }
 
-button{
+button {
 	padding: 10px;
 	background-color: #faf8f6;
 	border: 2px solid #56544f;
+}
+
+.events h1 {
+	text-align: center;
+}
+
+
+.container {
+    width: 100%;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.events h1 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+
+
+@media (max-width:480px) {
+	.image-container {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	
+	.image-item {
+		flex: 1 1 calc(33.333% - 10px);
+		margin: 5px;
+		box-sizing: border-box;
+	}
+	
+	.image-item img {
+		width: 100%;
+		height: auto;
+	}
+	
+	.image-caption {
+		text-align: center;
+		padding: 10px;
+	}
+	
+	.image-caption h2 {
+		font-size: 1.5rem;
+		margin: 10px 0;
+	}
+	
+	.image-caption p {
+		font-size: 1rem;
+		margin: 10px 0;
+	}
+	
+	.image-caption h3 {
+		font-size: 1.2rem;
+		margin: 10px 0;
+	}
+	
+	.image-caption button {
+		padding: 10px 20px;
+		font-size: 1rem;
+		cursor: pointer;
+	}
+
+
+
+
 }
