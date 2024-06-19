@@ -505,3 +505,34 @@ function searchMembers() {
 	font-size: 24px;
 	color: inherit;
 }
+
+.container {
+	font-family: Arial, sans-serif;
+	max-width: 800px;
+	margin: auto;
+	display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	align-items: center;
+}
+.labimage,
+.labimage > img {
+	width: 100%;
+}
+.imageContainer {
+	width: 100%;
+}
+.labimage > img {
+	border-radius: 100px;
+	box-sizing: border-box;
+	border: 10px solid #ffbf00;
+}
+.LabImage2 > img {
+	border-radius: 100px;
+	border: 10px solid #ffbf00;
+}
+.LabImage2,
+.LabImage2 > img {
+	width: 100%;
+	box-sizing: border-box;
+}
