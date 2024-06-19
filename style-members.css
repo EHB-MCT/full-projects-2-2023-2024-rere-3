@@ -1,0 +1,64 @@
+body {
+    font-family: Arial, sans-serif;
+}
+.member-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 20px;
+    justify-content: center; 
+}
+.member-card {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    padding: 16px;
+    margin: 10px;
+    max-width: 200px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    flex: 1 1 calc(25% - 40px); 
+    box-sizing: border-box;
+}
+.member-card img {
+    max-width: 100%;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+.member-info {
+    text-align: left;
+}
+.member-info h3 {
+    font-size: 1.2em;
+    margin: 10px 0 5px;
+}
+.member-info p {
+    margin: 5px 0;
+}
+@media (max-width: 768px) {
+    .member-card {
+        flex: 1 1 calc(50% - 40px); 
+    }
+}
+@media (max-width: 480px) {
+    .member-card {
+        flex: 1 1 calc(100% - 40px); 
+    }
+}
+.image-container {
+    position: relative;
+    display: inline-block;
+}
+.image-container.two-images img.second-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+.image-container.two-images:hover img.second-image {
+    opacity: 1;
+}
+.image-container.two-images:hover img.first-image {
+    opacity: 0;
+}
+

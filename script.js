@@ -1,26 +1,24 @@
+// Function to search members by name or title
 function searchMembers() {
-    var input, filter, membersList, members, name, title, i, nameValue, titleValue;
-    input = document.getElementById('searchInput');
-    filter = input.value.toUpperCase();
-    membersList = document.getElementById('membersList');
-    members = membersList.getElementsByClassName('member');
+    const input = document.getElementById('searchInput');
+    const filter = input.value.trim().toLowerCase();
+    const members = document.querySelectorAll('.member');
 
-    for (i = 0; i < members.length; i++) {
-        name = members[i].getElementsByClassName('name')[0];
-        title = members[i].getElementsByClassName('title')[0];
-        nameValue = name.textContent || name.innerText;
-        titleValue = title.textContent || title.innerText;
+    members.forEach(member => {
+        const name = member.querySelector('.name').textContent.toLowerCase();
+        const title = member.querySelector('.title').textContent.toLowerCase();
 
-        if (nameValue.toUpperCase().indexOf(filter) > -1 || titleValue.toUpperCase().indexOf(filter) > -1) {
-            members[i].style.display = "";
+        if (name.includes(filter) || title.includes(filter)) {
+            member.style.display = '';
         } else {
-            members[i].style.display = "none";
+            member.style.display = 'none';
         }
-    }
+    });
 }
 
+// Function to clear search input and show all members
 function clearSearch() {
-    document.getElementById('searchInput').value = '';
-    searchMembers(); // Call searchMembers to reset the member list display
+    const input = document.getElementById('searchInput');
+    input.value = ''; // Clear the search input field
+    searchMembers(); // Call searchMembers to reset member visibility
 }
-
