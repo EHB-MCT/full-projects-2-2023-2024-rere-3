@@ -136,3 +136,14 @@ p {
 	padding: 10px;
 	text-align: center;
 }
+
+.image-caption h3{
+	text-align: start;
+	margin-left: 30px;
+}
+
+button{
+	padding: 10px;
+	background-color: #faf8f6;
+	border: 2px solid #56544f;
+}
