@@ -536,3 +536,7 @@ function searchMembers() {
 	width: 100%;
 	box-sizing: border-box;
 }
+@media (min-width: 768px) {
+  .menu-icon {
+    display: none;
+  }
