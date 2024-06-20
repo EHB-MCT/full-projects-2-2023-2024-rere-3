@@ -121,6 +121,51 @@ h1 {
 .a {
 	font-style: none;
 }
+@media screen and (max-width: 768px) {
+	.menu-icon {
+		display: flex;
+	}
+
+	.nav-links {
+		display: none;
+		flex-direction: column;
+		width: 100%;
+		background-color: #ffbf00;
+		position: absolute;
+		top: 100px;
+		left: 0;
+	}
+
+	.nav-links a {
+		margin: 15px 0;
+		text-align: center;
+		padding: 10px;
+	}
+
+	.nav-links.show {
+		display: flex;
+	}
+}
+.menu {
+	display: none;
+	flex-direction: column;
+	cursor: pointer;
+}
+
+.menu .line {
+	width: 25px;
+	height: 3px;
+	background-color: #fff;
+	margin: 4px;
+	transition: all 0.3s;
+}
+nav {
+	padding: 10px 20px;
+	background-color: #ffbf00;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
 
 a {
 	text-decoration: none;
@@ -139,6 +184,12 @@ nav a {
 	float: right;
 }
 
+.nav-links {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
 .nav-links a {
 	margin-left: 20px;
 	margin-right: 20px;
@@ -150,6 +201,13 @@ h3,
 h4,
 p {
 	color: #56544f;
+
+}
+
+nav img {
+	width: 110px;
+	height: 100px;
+	padding-left: 20px;
 }
 
 .nav-links a:hover {
@@ -172,4 +230,10 @@ nav img {
 	height: 100px;
 	padding-left: 20px;
 	padding-bottom: 0%;
+}
+@media (min-width: 768px) {
+  .menu-icon {
+    display: none;
+  }
+
 }
