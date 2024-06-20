@@ -1,4 +1,4 @@
-/* body {
+ body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
@@ -30,7 +30,7 @@ main {
 h1 {
     font-size: 24px;
     text-align: center;
-} */
+} 
 
 @import url("https://fonts.googleapis.com/css2?family=Antonio:wght@100..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap");
@@ -411,34 +411,7 @@ p {
 	font-family: "Open Sans", sans-serif;
 }
 
-/* 
-function searchMembers() {
-     Récupérer la valeur saisie dans la barre de recherche
-    var input = document.getElementById('searchInput');
-    var filter = input.value.toUpperCase();
 
-    
-    var projects = document.getElementsByClassName('project-text');
-
-    
-    for (var i = 0; i < projects.length; i++) {
-        var text = projects[i].textContent || projects[i].innerText;
-        if (text.toUpperCase().indexOf(filter) > -1) {
-            projects[i].parentNode.style.display = "";
-        } else {
-            projects[i].parentNode.style.display = "none";
-        }
-    }
-}
-
-() {
-    document.getElementById('searchInput').value = '';
-     Réafficher tous les projets
-    var projects = document.getElementsByClassName('project');
-    for (var i = 0; i < projects.length; i++) {
-        projects[i].style.display = "";
-    }
-} */
 
 .outer {
 	background-color: #ffbf00;
