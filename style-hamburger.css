@@ -9,10 +9,20 @@ body {
 	position: relative;
 }
 
+nav {
+    padding: 10px 20px;
+    background-color: #ffbf00;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* Assure un espace égal entre les éléments */
+}
+
 .menu-icon {
 	font-size: 24px;
 	cursor: pointer;
 	color: white;
+	margin-left: auto;
+	
 }
 
 .menu-icon div {
@@ -22,6 +32,46 @@ body {
 	margin: 6px 0;
 	transition: 0.4s;
 	
+}
+
+@media (max-width: 768px) {
+	.outer {
+		padding: 10px; /* Réduire l'espacement */
+		font-size: 14px; /* Ajuster la taille de la police */
+	}
+}
+
+@media (max-width: 480px) {
+	.outer {
+		padding: 5px; /* Réduire encore l'espacement pour les plus petits écrans */
+		font-size: 12px; /* Ajustement supplémentaire de la taille de la police */
+	}
+}
+
+@media screen and (max-width: 768px) {
+	.hamburger {
+		display: flex;
+	}
+
+	.nav-links {
+		display: none;
+		flex-direction: column;
+		width: 100%;
+		background-color: #ffbf00;
+		position: absolute;
+		top: 100px;
+		left: 0;
+	}
+
+	.nav-links a {
+		margin: 15px 0;
+		text-align: center;
+		padding: 10px;
+	}
+
+	.nav-links.show {
+		display: flex;
+	}
 }
 
 .menu {

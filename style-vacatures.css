@@ -45,8 +45,7 @@ nav {
 	background-color: #ffbf00;
 	display: flex;
 	align-items: center;
-	justify-content: space-between
-
+	justify-content: space-between;
 }
 
 a {
@@ -181,6 +180,7 @@ p {
 	color: white;
 	padding: 20px 50px;
 	margin: 10px;
+	margin-top: 10px;
 	text-align: center;
 	text-decoration: none;
 	display: inline-block;
@@ -190,19 +190,26 @@ p {
 	height: 60px;
 }
 
-.button-3 {
-	background-color: #ffbf00;
-	border: none;
-	color: white;
+.nummer {
+	color: black;
 	padding: 15px 50px;
 	margin: 10px;
 	text-align: center;
-	text-decoration: none;
-	display: inline-block;
-	font-size: 16px;
-	border-radius: 0;
-	width: 350px;
-	height: 60px;
+}
+
+.nummer img {
+	background-color: #ffbf00;
+}
+
+.email {
+	color: black;
+	padding: 15px 50px;
+	margin: 10px;
+	text-align: center;
+}
+
+.email img {
+	background-color: #ffbf00;
 }
 
 .button-3 img {
@@ -231,7 +238,7 @@ p {
 }
 
 p {
-	color: black;
+	color: white;
 }
 
 .img {
@@ -324,6 +331,7 @@ p {
 	max-width: 600px;
 	position: relative;
 	margin: 20px 0; /* Centrer horizontalement */
+	margin-left: 450px;
 }
 
 .search-bar input {
@@ -368,25 +376,26 @@ p {
 }
 
 .projects {
-	display: flex;
-	flex-wrap: wrap;
-	justify-content: center;
+	display: grid;
+	grid-template-columns: repeat(3, 1fr); /* 3 colonnes de largeur égale */
+	gap: 20px; /* Espacement entre les éléments */
+	justify-items: center; /* Centre les éléments dans les colonnes */
 }
 
 .project {
 	width: 200px;
-	margin: 20px;
 	text-align: center;
 }
 
 .project-image {
-	width: 100%;
-	height: 150px;
+	width: 150%;
+	height: 190px;
 	border-radius: 25px;
 	background: #ffbf00;
 	padding: 5px;
 	box-sizing: border-box;
 	overflow: hidden;
+	margin-left: -40px;
 }
 
 .project-image img {
@@ -438,19 +447,22 @@ function searchMembers() {
 	text-align: center;
 	width: 100%;
 	box-sizing: border-box;
+	margin-top: 200px;
 }
 
+/* Responsive adjustments */
 @media (max-width: 768px) {
-	.outer {
-		padding: 10px;
-		font-size: 14px;
+	.projects {
+		grid-template-columns: repeat(
+			2,
+			1fr
+		); /* 2 colonnes sur des écrans plus petits */
 	}
 }
 
 @media (max-width: 480px) {
-	.outer {
-		padding: 5px;
-		font-size: 12px;
+	.projects {
+		grid-template-columns: 1fr; /* 1 colonne sur des écrans très petits */
 	}
 }
 
@@ -499,6 +511,7 @@ function searchMembers() {
 	padding: 20px;
 	box-sizing: border-box;
 	background-color: #ffbf00;
+	margin-top: 450px;
 }
 
 .back-arrow a {
@@ -538,7 +551,27 @@ function searchMembers() {
 	box-sizing: border-box;
 }
 @media (min-width: 768px) {
-  .menu-icon {
-    display: none;
-  }
+	.menu-icon {
+		display: none;
+	}
+}
+
+.main_map {
+	margin-top: 100px;
+}
+
+.map-container iframe {
+	width: 100%; /* Largeur de l'iframe à 100% du conteneur */
+	height: 500%; /* Hauteur de l'iframe à 100% du conteneur */
+	border: 0; /* Supprime la bordure de l'iframe */
+}
+
+.map-container {
+	position: relative; /* Position relative pour gérer les dimensions */
+	width: 100%; /* Largeur du conteneur (ajustez selon vos besoins) */
+	height: 90vh; /* Hauteur du conteneur (ajustez selon vos besoins) */
+	max-width: 1517px; /* Largeur maximale du conteneur */
+	max-height: 100px; /* Hauteur maximale du conteneur */
+	border: 1px solid #ccc; /* Bordure optionnelle */
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Ombre pour effet visuel */
 }
