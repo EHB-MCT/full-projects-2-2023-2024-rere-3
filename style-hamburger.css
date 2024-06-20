@@ -10,11 +10,11 @@ body {
 }
 
 nav {
-    padding: 10px 20px;
-    background-color: #ffbf00;
-    display: flex;
-    align-items: center;
-    justify-content: space-between; /* Assure un espace égal entre les éléments */
+	padding: 10px 20px;
+	background-color: #ffbf00;
+	display: flex;
+	align-items: center;
+	justify-content: space-between; /* Assure un espace égal entre les éléments */
 }
 
 .menu-icon {
@@ -22,7 +22,6 @@ nav {
 	cursor: pointer;
 	color: white;
 	margin-left: auto;
-	
 }
 
 .menu-icon div {
@@ -31,7 +30,6 @@ nav {
 	background-color: #000;
 	margin: 6px 0;
 	transition: 0.4s;
-	
 }
 
 @media (max-width: 768px) {
@@ -82,7 +80,7 @@ nav {
 	right: 0;
 	background-color: #ffb300;
 	overflow-x: hidden;
-	padding-top: 120px;
+	padding-top: 12px;
 	display: flex;
 	flex-direction: column;
 	align-items: center;
@@ -115,15 +113,17 @@ nav {
 	color: #fff;
 }
 
- .menu-footer {
+.menu-footer {
 	padding-top: 120px;
 	bottom: 10px;
 	text-align: center;
 	color: #fff;
-} 
+	display: none;
+}
 
- .social-icons img {
+.social-icons img {
 	width: 12px;
 	height: 12px;
 	margin: 0 10px;
-} 
+	display: none;
+}
