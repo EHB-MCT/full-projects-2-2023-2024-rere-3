@@ -15,9 +15,10 @@ header {
 }
 
 .logo {
-	height: 100px;
 	width: 110px;
+	height: 100px;
 	padding-left: 20px;
+	padding-bottom: 0%;
 }
 
 .menu-icon {
@@ -176,6 +177,11 @@ a {
 nav a {
 	padding-top: 70px;
 	text-align: center;
+	float: left;
+}
+
+.nav-links {
+	float: right;
 }
 
 .nav-links {
@@ -187,6 +193,15 @@ nav a {
 .nav-links a {
 	margin-left: 20px;
 	margin-right: 20px;
+} 
+
+h1,
+h2,
+h3,
+h4,
+p {
+	color: #56544f;
+
 }
 
 nav img {
@@ -194,6 +209,7 @@ nav img {
 	height: 100px;
 	padding-left: 20px;
 }
+
 .nav-links a:hover {
 	text-decoration: underline;
 	text-decoration-color: #56544f;
@@ -201,7 +217,23 @@ nav img {
 	text-decoration-thickness: 4px;
 	text-underline-offset: 10px;
 }
+
+nav {
+	padding-top: 0;
+	background-color: #ffbf00;
+	padding: 10px;
+}
+
+
+nav img {
+	width: 110px;
+	height: 100px;
+	padding-left: 20px;
+	padding-bottom: 0%;
+}
 @media (min-width: 768px) {
   .menu-icon {
     display: none;
   }
+
+}
