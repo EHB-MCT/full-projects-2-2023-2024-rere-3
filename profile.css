@@ -26,3 +26,11 @@ body {
 .profile-info p {
     margin: 10px 0;
 }
+
+p a {
+        text-decoration: none;
+        color: blue;
+        font-family: "Nunito", sans-serif;
+        font-weight: bold;
+    
+}
