@@ -1,117 +1,127 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Projects</title>
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="style-hamburger.css">
-</head>
-<body>
-    <header>
-        <nav>
-            <img src="images/Logo_RERE_RGB.png" alt="Logo">
-            <div class="menu-icon" id="menu-icon">&#9776;</div>
-            <div class="nav-links" id="nav-links">
-                <a href="home.html">Home</a>
-                <a href="members.html">Members</a>
-                <a href="project.html">Projects</a>
-                <a href="our lab.html">Our Lab</a>
-                <a href="vacatures.html">Vacatures</a>
-                <a href="#">News & Events</a>
-            </div>
-        </nav>
-    </header>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Projects</title>
+		<link href="css/reset.css" rel="stylesheet" />
+		<link rel="stylesheet" href="style-hamburger.css" />
+	</head>
+	<body>
+		<header>
+			<nav>
+				<img src="images/Logo_RERE_RGB.png" />
+				<div class="menu-icon" id="menu-icon">&#9776;</div>
+				<div class="nav-links" id="nav-links">
+					<a href="home.html">Home</a>
+					<a href="members.html">Members</a>
+					<a href="project.html">Projects</a>
+					<a href="our lab.html">our lab</a>
+					<a href="vacatures.html">vacatures</a>
+					<a
+						href="https://researchportal.vub.be/en/organisations/rehabilitation-research/publications/"
+						>publications</a
+					>
+					<a href="#">News & Events</a>
+				</div>
+			</nav>
+		</header>
 
-    <h1>Projects</h1>
+		<h1>Projects</h1>
 
-    <div class="search-bar">
-        <input type="text" id="searchInput" placeholder="Search for names or job titles.." onkeyup="searchProjects()">
-        <div class="search-icon" onclick="clearSearch()">
-            <img src="images/search-svgrepo-com.png" alt="Search">
-        </div>
-    </div>
+		<div class="search-bar">
+			<input
+				type="text"
+				id="searchInput"
+				placeholder="Search for names or job titles.."
+				onkeyup="searchProjects()"
+			/>
+			<div class="search-icon" onclick="clearSearch()">
+				<img src="images/search-svgrepo-com.png" alt="Search" />
+			</div>
+		</div>
 
-    <div class="projects" id="projects-container">
-        <!-- Projects will be dynamically inserted here by JavaScript -->
-    </div>
+		<div class="projects" id="projects-container">
+			<!-- Projects will be dynamically inserted here by JavaScript -->
+		</div>
 
+		<!-- Include PocketBase via CDN -->
+		<script src="https://cdn.jsdelivr.net/npm/pocketbase@0.13.0/dist/pocketbase.umd.js"></script>
 
-    <!-- Include PocketBase via CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/pocketbase@0.13.0/dist/pocketbase.umd.js"></script>
+		<script type="module">
+			import PocketBase from "https://cdn.jsdelivr.net/npm/pocketbase@0.13.0/dist/pocketbase.es.mjs";
 
-    <script type="module">
-        import PocketBase from 'https://cdn.jsdelivr.net/npm/pocketbase@0.13.0/dist/pocketbase.es.mjs';
+			document.addEventListener("DOMContentLoaded", async function () {
+				const pb = new PocketBase("https://rere3.pockethost.io");
 
-        document.addEventListener('DOMContentLoaded', async function() {
-            const pb = new PocketBase('https://rere3.pockethost.io');
+				try {
+					const result = await pb.collection("projects").getList(1, 30);
+					console.log("API response:", result); // Log the API response
+					const projects = result.items;
 
-            try {
-                const result = await pb.collection('projects').getList(1, 30);
-                console.log('API response:', result); // Log the API response
-                const projects = result.items;
+					if (projects && Array.isArray(projects)) {
+						const projectsContainer =
+							document.getElementById("projects-container");
+						projectsContainer.innerHTML = ""; // Clear any existing content
 
-                if (projects && Array.isArray(projects)) {
-                    const projectsContainer = document.getElementById('projects-container');
-                    projectsContainer.innerHTML = ''; // Clear any existing content
+						projects.forEach((project) => {
+							for (let i = 1; i <= 99; i++) {
+								const projectTitle = project[`project_title_${i}`];
+								const projectImage = project[`project_image_${i}`];
 
-                    projects.forEach((project) => {
-                        for (let i = 1; i <= 99; i++) {
-                            const projectTitle = project[`project_title_${i}`];
-                            const projectImage = project[`project_image_${i}`];
+								if (projectTitle && projectImage) {
+									const projectDiv = document.createElement("div");
+									projectDiv.classList.add("project");
 
-                            if (projectTitle && projectImage) {
-                                const projectDiv = document.createElement('div');
-                                projectDiv.classList.add('project');
+									const imageDiv = document.createElement("div");
+									imageDiv.classList.add("project-image");
 
-                                const imageDiv = document.createElement('div');
-                                imageDiv.classList.add('project-image');
-                                
-                                const img = document.createElement('img');
-                                img.src = `https://rere3.pockethost.io/api/files/${project.collectionId}/${project.id}/${projectImage}`;
-                                img.alt = projectTitle;
+									const img = document.createElement("img");
+									img.src = `https://rere3.pockethost.io/api/files/${project.collectionId}/${project.id}/${projectImage}`;
+									img.alt = projectTitle;
 
-                                imageDiv.appendChild(img);
+									imageDiv.appendChild(img);
 
-                                const textDiv = document.createElement('div');
-                                textDiv.classList.add('project-text');
-                                textDiv.textContent = projectTitle;
+									const textDiv = document.createElement("div");
+									textDiv.classList.add("project-text");
+									textDiv.textContent = projectTitle;
 
-                                projectDiv.appendChild(imageDiv);
-                                projectDiv.appendChild(textDiv);
+									projectDiv.appendChild(imageDiv);
+									projectDiv.appendChild(textDiv);
 
-                                projectsContainer.appendChild(projectDiv);
-                            }
-                        }
-                    });
-                } else {
-                    console.error('Error: No projects found or data structure is incorrect.');
-                }
-            } catch (error) {
-                console.error('Error fetching the projects:', error);
-            }
-        });
-    </script>
+									projectsContainer.appendChild(projectDiv);
+								}
+							}
+						});
+					} else {
+						console.error(
+							"Error: No projects found or data structure is incorrect."
+						);
+					}
+				} catch (error) {
+					console.error("Error fetching the projects:", error);
+				}
+			});
+		</script>
 
-<nav class="menu" id="menu">
-    <a href="#" class="menu-close" id="menu-close">&times;</a>
-    <a href="home.html" class="menu-item">HOME</a>
-    <a href="members.html" class="menu-item">MEMBERS</a>
-    <a href="project.html" class="menu-item">PROJECTS</a>
-    <a href="our lab.html" class="menu-item">OUR LAB</a>
-    <a href="vacatures.html" class="menu-item">VACATURES</a>
-    <div class="menu-footer">
-        <p>Laarbeeklaan 121 1090 Jette</p>
-        <p>024774420</p>
-    </div>
-</nav>
-<script src="script-hamburger.js"></script>
-<script src="script.js"></script>
-<script src="script-ms.js"></script>
-    <footer class="outer">
-        <img src="images/Group_256.png" alt="Footer Image">
-        <p>Laarbeeklaan 121 1090 Jette</p>
-    </footer>
-
-</body>
+		<nav class="menu" id="menu">
+			<a href="#" class="menu-close" id="menu-close">&times;</a>
+			<a href="home.html" class="menu-item">HOME</a>
+			<a href="members.html" class="menu-item">MEMBERS</a>
+			<a href="project.html" class="menu-item">PROJECTS</a>
+			<a href="our lab.html" class="menu-item">OUR LAB</a>
+			<a href="vacatures.html" class="menu-item">VACATURES</a>
+			<div class="menu-footer">
+				<p>Laarbeeklaan 121 1090 Jette</p>
+				<p>024774420</p>
+			</div>
+		</nav>
+		<script src="script-hamburger.js"></script>
+		<script src="script.js"></script>
+		<script src="script-ms.js"></script>
+		<footer class="outer">
+			<img src="images/Group_256.png" alt="Footer Image" />
+			<p>Laarbeeklaan 121 1090 Jette</p>
+		</footer>
+	</body>
 </html>
