@@ -1,101 +1,92 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style-hamburger.css">
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="profile.css">
-    <title>Member Profile</title>
-</head>
-<body>
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="stylesheet" href="style-hamburger.css" />
+		<link rel="stylesheet" href="style.css" />
+		<link rel="stylesheet" href="profile.css" />
+		<title>Member Profile</title>
+	</head>
+	<body>
+		<header>
+			<nav>
+				<img src="images/images-home/Logo_RERE_RGB.png" />
+				<div class="menu-icon" id="menu-icon">&#9776;</div>
+				<div class="nav-links" id="nav-links">
+					<a href="index.html">Home</a>
+					<a href="members.html">Members</a>
+					<a href="project.html">Projects</a>
+					<a href="our lab.html">our lab</a>
+					<a href="vacatures.html">vacatures</a>
+					<a href="#">News & Events</a>
+				</div>
+			</nav>
+		</header>
 
-	<header>
-		<nav>
-			<img src="images/Logo_RERE_RGB.png" />
-			<div class="menu-icon" id="menu-icon">&#9776;</div>
-			<div class="nav-links" id="nav-links">
-				<a href="index.html">Home</a>
-				<a href="members.html">Members</a>
-				<a href="project.html">Projects</a>
-				<a href="our lab.html">our lab</a>
-				<a href="vacatures.html">vacatures</a>
-				<a href="#">News & Events</a>
+		<div class="back-arrow">
+			<a href="members.html">&#8592;</a>
+		</div>
+
+		<div id="profile-container" class="profile-container">
+			<!-- Profile data -->
+		</div>
+
+		<nav class="menu" id="menu">
+			<a href="#" class="menu-close" id="menu-close">&times;</a>
+			<a href="index.html" class="menu-item">HOME</a>
+			<a href="members.html" class="menu-item">MEMBERS</a>
+			<a href="project.html" class="menu-item">PROJECTS</a>
+			<a href="our lab.html" class="menu-item">OUR LAB</a>
+			<a href="vacatures.html" class="menu-item">VACATURES</a>
+			<div class="menu-footer">
+				<p>Laarbeeklaan 121 1090 Jette</p>
+				<p>024774420</p>
+				<div class="social-icons">
+					<a href="#"><img src="instagram-icon.png" alt="Instagram" /></a>
+					<a href="#"><img src="twitter-icon.png" alt="Twitter" /></a>
+					<a href="#"><img src="facebook-icon.png" alt="Facebook" /></a>
+				</div>
 			</div>
 		</nav>
-	</header>
+		<footer class="outer">
+			<img src="images/Group_256.png" />
+			<p>Laarbeeklaan 121 1090 Jette</p>
+		</footer>
 
+		<script src="https://cdn.jsdelivr.net/npm/pocketbase@0.13.0/dist/pocketbase.umd.js"></script>
+		<script src="script-hamburger.js"></script>
 
+		<script>
+			document.addEventListener("DOMContentLoaded", async function () {
+				const pb = new PocketBase("https://rere3.pockethost.io");
 
+				const urlParams = new URLSearchParams(window.location.search);
+				const memberId = urlParams.get("id");
+				const profileIndex = urlParams.get("profile");
 
-	<div class="back-arrow">
-        <a href="members.html">&#8592;</a>
-    </div>
+				if (memberId && profileIndex) {
+					try {
+						const member = await pb.collection("members").getOne(memberId);
+						const profileKey = `profile_${profileIndex}`;
+						const nameKey = `name_${profileIndex}`;
+						const titleKey = `title_${profileIndex}`;
+						const emailKey = `email_${profileIndex}`;
+						const biographyKey = `bio_${profileIndex}`;
+						const crisKey = `CRIS_${profileIndex}`;
 
+						const profiles = member[profileKey];
+						const name = member[nameKey];
+						const title = member[titleKey];
+						const email = member[emailKey];
+						const biography =
+							member[biographyKey] || "Biography not available.";
+						const crisLink = member[crisKey];
 
-
-
-    <div id="profile-container" class="profile-container">
-        <!-- Profile data -->
-    </div>
-
-
-
-    <nav class="menu" id="menu">
-        <a href="#" class="menu-close" id="menu-close">&times;</a>
-        <a href="index.html" class="menu-item">HOME</a>
-        <a href="members.html" class="menu-item">MEMBERS</a>
-        <a href="project.html" class="menu-item">PROJECTS</a>
-        <a href="our lab.html" class="menu-item">OUR LAB</a>
-        <a href="vacatures.html" class="menu-item">VACATURES</a>
-        <div class="menu-footer">
-            <p>Laarbeeklaan 121 1090 Jette</p>
-            <p>024774420</p>
-            <div class="social-icons">
-                <a href="#"><img src="instagram-icon.png" alt="Instagram" /></a>
-                <a href="#"><img src="twitter-icon.png" alt="Twitter" /></a>
-                <a href="#"><img src="facebook-icon.png" alt="Facebook" /></a>
-            </div>
-        </div>
-    </nav>
-    <footer class="outer">
-        <img src="images/Group_256.png" />
-        <p>Laarbeeklaan 121 1090 Jette</p>
-    </footer>
-
-
-    <script src="https://cdn.jsdelivr.net/npm/pocketbase@0.13.0/dist/pocketbase.umd.js"></script>
-    <script src="script-hamburger.js"></script>
-
-
-    <script>
-        document.addEventListener('DOMContentLoaded', async function() {
-            const pb = new PocketBase('https://rere3.pockethost.io');
-
-            const urlParams = new URLSearchParams(window.location.search);
-            const memberId = urlParams.get('id');
-            const profileIndex = urlParams.get('profile');
-
-            if (memberId && profileIndex) {
-                try {
-                    const member = await pb.collection('members').getOne(memberId);
-                    const profileKey = `profile_${profileIndex}`;
-                    const nameKey = `name_${profileIndex}`;
-                    const titleKey = `title_${profileIndex}`;
-                    const emailKey = `email_${profileIndex}`;
-                    const biographyKey = `bio_${profileIndex}`;
-                    const crisKey = `CRIS_${profileIndex}`;
-
-                    const profiles = member[profileKey];
-                    const name = member[nameKey];
-                    const title = member[titleKey];
-                    const email = member[emailKey];
-                    const biography = member[biographyKey] || 'Biography not available.';
-                    const crisLink = member[crisKey];
-
-                    if (profiles && profiles.length > 0 && name && title && email) {
-                        const profileContainer = document.getElementById('profile-container');
-                        profileContainer.innerHTML = `
+						if (profiles && profiles.length > 0 && name && title && email) {
+							const profileContainer =
+								document.getElementById("profile-container");
+							profileContainer.innerHTML = `
                             <img src="https://rere3.pockethost.io/api/files/${member.collectionId}/${member.id}/${profiles[0]}" alt="${name}'s Profile Image">
                             <div class="profile-info">
                                 <h2>${name}</h2>
@@ -105,16 +96,16 @@
                                 <p><strong>CRIS Profile:</strong> <a href="${crisLink}" target="_blank">View Profile</a></p>
                             </div>
                         `;
-                    } else {
-                        console.error('Error: Profile data is incomplete.');
-                    }
-                } catch (error) {
-                    console.error('Error fetching the member profile:', error);
-                }
-            } else {
-                console.error('Error: Member ID or Profile Index is missing.');
-            }
-        });
-    </script>
-</body>
+						} else {
+							console.error("Error: Profile data is incomplete.");
+						}
+					} catch (error) {
+						console.error("Error fetching the member profile:", error);
+					}
+				} else {
+					console.error("Error: Member ID or Profile Index is missing.");
+				}
+			});
+		</script>
+	</body>
 </html>
